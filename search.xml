@@ -1,32 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01_初识Vue</title>
-    <url>/Vue/%E7%AC%94%E8%AE%B0/01-%E5%88%9D%E8%AF%86Vue/</url>
-    <content><![CDATA[<h2 id="Vue渐进式的框架-声明式编程"><a href="#Vue渐进式的框架-声明式编程" class="headerlink" title="Vue渐进式的框架(声明式编程)"></a>Vue渐进式的框架(声明式编程)</h2><h3 id="什么是渐进式"><a href="#什么是渐进式" class="headerlink" title="什么是渐进式"></a>什么是渐进式</h3><p>​        渐进式意味着你可以将Vue作为你应用的一部分嵌入其中，带来更丰富的交互体验。</p>
-<p>​        或者如果你希望将更多的业务逻辑使用Vue实现，那么Vue的核心库以及其生态系统。</p>
-<p>​        比如Core+Vue-router+Vuex，也可以满足你各种各样的需求。</p>
-<p><strong>JavaScript是命令式编程，Vue是声明式编程</strong></p>
-<h3 id="Vue有很多特点和Web开发中常见的高级功能"><a href="#Vue有很多特点和Web开发中常见的高级功能" class="headerlink" title="Vue有很多特点和Web开发中常见的高级功能"></a>Vue有很多特点和Web开发中常见的高级功能</h3><p>解耦视图和数据</p>
-<p>可复用的组件</p>
-<p>前端路由技术</p>
-<p>状态管理</p>
-<p>虚拟DOM</p>
-<h3 id="安装Vue"><a href="#安装Vue" class="headerlink" title="安装Vue"></a>安装Vue</h3><ul>
-<li>CDN引入</li>
-<li>下载引入</li>
-<li>npm安装</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Vue</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>01_git 简介</title>
     <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/01-git-%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<h3 id="集中式-svn"><a href="#集中式-svn" class="headerlink" title="集中式(svn)"></a>集中式(svn)</h3><p>svn因为每次存的都是差异 需要的硬盘空间会相对的小一点  可是回滚的速度会很慢<br>优点:<br>    代码存放在单一的服务器上 便于项目的管理<br>缺点:<br>    服务器宕机: 员工写的代码得不到保障<br>    服务器炸了: 整个项目的历史记录都会丢失</p>
@@ -47,7 +21,7 @@
 <p>查看版本号</p>
 <p>git –version</p>
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#x79;&#x73;&#x6a;&#x31;&#56;&#48;&#x33;&#55;&#x33;&#49;&#x36;&#52;&#51;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;">&#x79;&#x73;&#x6a;&#x31;&#56;&#48;&#x33;&#55;&#x33;&#49;&#x36;&#52;&#51;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>git config –global user.email <a href="mailto:&#x79;&#115;&#x6a;&#49;&#56;&#x30;&#x33;&#55;&#51;&#49;&#54;&#52;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;">&#x79;&#115;&#x6a;&#49;&#56;&#x30;&#x33;&#55;&#51;&#49;&#54;&#52;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -270,6 +244,54 @@
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01_初识Vue</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/</url>
+    <content><![CDATA[<h2 id="Vue渐进式的框架-声明式编程"><a href="#Vue渐进式的框架-声明式编程" class="headerlink" title="Vue渐进式的框架(声明式编程)"></a>Vue渐进式的框架(声明式编程)</h2><h3 id="什么是渐进式"><a href="#什么是渐进式" class="headerlink" title="什么是渐进式"></a>什么是渐进式</h3><p>​        渐进式意味着你可以将Vue作为你应用的一部分嵌入其中，带来更丰富的交互体验。</p>
+<p>​        或者如果你希望将更多的业务逻辑使用Vue实现，那么Vue的核心库以及其生态系统。</p>
+<p>​        比如Core+Vue-router+Vuex，也可以满足你各种各样的需求。</p>
+<p><strong>JavaScript是命令式编程，Vue是声明式编程</strong></p>
+<h3 id="Vue有很多特点和Web开发中常见的高级功能"><a href="#Vue有很多特点和Web开发中常见的高级功能" class="headerlink" title="Vue有很多特点和Web开发中常见的高级功能"></a>Vue有很多特点和Web开发中常见的高级功能</h3><p>解耦视图和数据</p>
+<p>可复用的组件</p>
+<p>前端路由技术</p>
+<p>状态管理</p>
+<p>虚拟DOM</p>
+<h3 id="安装Vue"><a href="#安装Vue" class="headerlink" title="安装Vue"></a>安装Vue</h3><ul>
+<li>CDN引入</li>
+<li>下载引入</li>
+<li>npm安装</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>02_Vue的使用</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
+<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
+<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
+<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
+<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
+<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
+<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
+<p>记住dom渲染完毕，是在mounted</p>
+<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
+<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/01.png" alt="lifecycle"></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>

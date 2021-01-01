@@ -190,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/Vue/%E7%AC%94%E8%AE%B0/01-%E5%88%9D%E8%AF%86Vue/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
@@ -204,7 +204,116 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/Vue/%E7%AC%94%E8%AE%B0/01-%E5%88%9D%E8%AF%86Vue/" class="post-title-link" itemprop="url">01_初识Vue</a>
+            <a href="/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">02_Vue的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-01 20:21:05 / 修改时间：20:23:51" itemprop="dateCreated datePublished" datetime="2021-01-01T20:21:05+08:00">2021-01-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Vue/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">笔记</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>354</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
+<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
+<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
+<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
+<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
+<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
+<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
+<p>记住dom渲染完毕，是在mounted</p>
+<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
+<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/01.png" alt="lifecycle"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/profile.jpg">
+      <meta itemprop="name" content="Doran">
+      <meta itemprop="description" content="生活,思考,代码,博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Doran">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/" class="post-title-link" itemprop="url">01_初识Vue</a>
         </h2>
 
         <div class="post-meta">
@@ -240,8 +349,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/Vue/%E7%AC%94%E8%AE%B0/01-%E5%88%9D%E8%AF%86Vue/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/Vue/%E7%AC%94%E8%AE%B0/01-%E5%88%9D%E8%AF%86Vue/" itemprop="commentCount"></span>
+    <a title="valine" href="/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -1300,7 +1409,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>874</span>
+              <span>870</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -1323,7 +1432,7 @@
 <p>查看版本号</p>
 <p>git –version</p>
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#x79;&#x73;&#x6a;&#x31;&#56;&#48;&#x33;&#55;&#x33;&#49;&#x36;&#52;&#51;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;">&#x79;&#x73;&#x6a;&#x31;&#56;&#48;&#x33;&#55;&#x33;&#49;&#x36;&#52;&#51;&#x33;&#64;&#x31;&#54;&#x33;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>git config –global user.email <a href="mailto:&#x79;&#115;&#x6a;&#49;&#56;&#x30;&#x33;&#55;&#51;&#49;&#54;&#52;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;">&#x79;&#115;&#x6a;&#49;&#56;&#x30;&#x33;&#55;&#51;&#49;&#54;&#52;&#x33;&#x33;&#64;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -1522,7 +1631,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1591,7 +1700,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">14k</span>
+    <span title="站点总字数">15k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
