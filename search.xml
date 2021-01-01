@@ -21,7 +21,7 @@
 <p>查看版本号</p>
 <p>git –version</p>
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#121;&#x73;&#106;&#49;&#56;&#48;&#x33;&#55;&#51;&#49;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x73;&#106;&#49;&#56;&#48;&#x33;&#55;&#51;&#49;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#x63;&#x6f;&#109;</a></p>
+<p>git config –global user.email <a href="mailto:&#x79;&#115;&#106;&#49;&#x38;&#x30;&#x33;&#55;&#51;&#49;&#x36;&#52;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;">&#x79;&#115;&#106;&#49;&#x38;&#x30;&#x33;&#55;&#51;&#49;&#x36;&#52;&#51;&#51;&#x40;&#49;&#x36;&#x33;&#46;&#x63;&#111;&#x6d;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -389,6 +389,81 @@
 <h3 id="2-2-配置去哪儿了"><a href="#2-2-配置去哪儿了" class="headerlink" title="2.2 配置去哪儿了"></a>2.2 配置去哪儿了</h3><h4 id="2-2-1-第一种方式-使用vue-ui"><a href="#2-2-1-第一种方式-使用vue-ui" class="headerlink" title="2.2.1 第一种方式:使用vue ui"></a>2.2.1 第一种方式:使用vue ui</h4><p>在本地安装vue/cli时会同时安装了vue，在vue中包含了vue ui。在哪个目录下都可以使用，他管理的是本地服务器。然后导入项目中，即可查看该项目的配置。</p>
 <h4 id="2-2-2-第二种方式-在文件目录中查找"><a href="#2-2-2-第二种方式-在文件目录中查找" class="headerlink" title="2.2.2 第二种方式:在文件目录中查找"></a>2.2.2 第二种方式:在文件目录中查找</h4><p>在node_modules@vue\cli-service\webpack.config.js中</p>
 <h4 id="2-2-3-当需要修改默认配置"><a href="#2-2-3-当需要修改默认配置" class="headerlink" title="2.2.3 当需要修改默认配置"></a><font color="red">2.2.3 当需要修改默认配置</font></h4><p>在项目文件夹根目录下创建一个vue.config.js配置文件（文件名不能修改）</p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>08_axios框架</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/08-axios%E6%A1%86%E6%9E%B6/</url>
+    <content><![CDATA[<p>有关JSONP去看BV1jt411j72F</p>
+<h3 id="axios框架之认识axios"><a href="#axios框架之认识axios" class="headerlink" title="axios框架之认识axios"></a>axios框架之认识axios</h3><h4 id="1-选择什么网络模块"><a href="#1-选择什么网络模块" class="headerlink" title="1 选择什么网络模块"></a>1 选择什么网络模块</h4><ul>
+<li>传统的Ajax是基于XMLHttpRequest(XHR)<br>不选择该方式：原因是配置和调用方式等非常混乱</li>
+<li>jQuery-Ajax<br>不选择该方式：原因是没有必要为了用网络请求就引用这个重量级的框架</li>
+<li>Vue-resource<br>不选择该方式：原因是作者不再维护，并且推荐使用axios</li>
+<li>axios<br>axios有非常多的优点, 并且用起来也非常方便</li>
+</ul>
+<h4 id="2-axios的特点"><a href="#2-axios的特点" class="headerlink" title="2. axios的特点"></a>2. axios的特点</h4><ul>
+<li><p>在浏览器中发送 XMLHttpRequests 请求</p>
+</li>
+<li><p>在 node.js 中发送 http请求</p>
+</li>
+<li><p>支持 Promise API</p>
+</li>
+<li><p>拦截请求和响应</p>
+</li>
+<li><p>转换请求和响应数据</p>
+</li>
+</ul>
+<h4 id="3-使用axios"><a href="#3-使用axios" class="headerlink" title="3. 使用axios"></a>3. 使用axios</h4><p>首先安装axios框架：npm install axios –save</p>
+<p>使用axios，首先他是框架与之前的vue-router、vuex插件把不同。插件在使用前必须用Vue.use安装插件。但是框架不用，使用npm安装完框架就可直接使用。</p>
+<p>支持多种请求方式:</p>
+<ul>
+<li>axios(config)</li>
+<li>axios.request(config)</li>
+<li>axios.get(url[, config])</li>
+<li>axios.delete(url[, config])</li>
+<li>axios.head(url[, config])</li>
+<li>axios.post(url[, data[, config]])</li>
+<li>axios.put(url[, data[, config]])</li>
+<li>axios.patch(url[, data[, config]])</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1.基本使用</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/multidata&#x27;</span>,</span><br><span class="line">  method: <span class="string">&#x27;get&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 配置参数信息</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/data&#x27;</span>,</span><br><span class="line">  method: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;pop&#x27;</span>,</span><br><span class="line">    page: <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;) </span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.发送并发请求</span></span><br><span class="line">axios.all([axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/multidata&#x27;</span>,</span><br><span class="line">&#125;),axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/data&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;sell&#x27;</span>,</span><br><span class="line">    page: <span class="number">5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)]).then(axios.spread(<span class="function">(<span class="params">res1,res2</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res1)</span><br><span class="line">    <span class="built_in">console</span>.log(res2)</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 全局配置</span></span><br><span class="line"><span class="comment">// 原因:在开发中很多参数都是固定的,此时就需要抽取这些参数.此时就用到了axios的全局配置</span></span><br><span class="line">axios.defaults.baseURL = <span class="string">&#x27;http://152.136.185.210:7878/api/m5&#x27;</span></span><br><span class="line">axios.defaults.timeout = <span class="number">5000</span></span><br></pre></td></tr></table></figure>
+<p>常见的配置选项：</p>
+<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/08-axios%E6%A1%86%E6%9E%B6/01.png" alt="image-20201226153248773"></p>
+<h4 id="4-axios实例"><a href="#4-axios实例" class="headerlink" title="4. axios实例"></a>4. axios实例</h4><p>​        前面的代码都是在使用全局的axios和对应的配置在进行网络请求，在现实中是不会这样做的。因为有可能每个功能需要访问的服务端地址不一样，这样就需要创建出不同的axios实例来处理不同的需求等等。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 4.创建axios实例</span></span><br><span class="line"><span class="keyword">const</span> instance1 = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">&#x27;http://152.136.185.210:7878/api/m5&#x27;</span>,</span><br><span class="line">  timeout: <span class="number">5000</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">instance1(&#123;</span><br><span class="line">  url: <span class="string">&#x27;/home/multidata&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">instance1(&#123;</span><br><span class="line">  url: <span class="string">&#x27;/home/data&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;pop&#x27;</span>,</span><br><span class="line">    page: <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当出现需要访问的服务端地址不同时,此时就在创建一个新的实例即可</span></span><br><span class="line"><span class="keyword">const</span> instance1 = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">&#x27;http://222.111.33.33:8000&#x27;</span>,</span><br><span class="line">  timeout: <span class="number">3000</span></span><br><span class="line">&#125;)js</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="5-网络模块封装的重要性"><a href="#5-网络模块封装的重要性" class="headerlink" title="5. 网络模块封装的重要性"></a><font color="red">5. 网络模块封装的重要性</font></h4><p><strong><font color="deeppink">具体怎么一步步实现去看BV15741177Eh?p=146</font></strong></p>
+<p>​        在选择使用网络模块时,一定要对其封装后再使用。原因是第三方的网络模块是有可能出现一些bug或者突然间不再维护。此时就得更换所选用的第三方模块。此时模块的封装就显得尤为重要。封装或进行模块的切换就变得容易许多。</p>
+<p>​        封装方法：<br>​        首先在src文件夹下创建一个network文件用于存放网络层的封装。然后在内部创建对应模块的封装js文件。</p>
+<p>​        然后在内部想方法让其return出去一个promise对象即可。在使用时直接调用then和catch方法去做回调。当第三方库出现问题后直接修改该文件,将改用的另一种第三方库也返回一个promise对象即可。</p>
+<p>src/network/request.js</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">request</span>(<span class="params">config</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 1.创建axios实例</span></span><br><span class="line">  <span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">    baseURL: <span class="string">&#x27;http://152.136.185.210:7878/api/m5&#x27;</span>,</span><br><span class="line">    timeout: <span class="number">5000</span></span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 2.axios拦截器interceptors</span></span><br><span class="line">  <span class="comment">// 2.1.请求拦截的作用</span></span><br><span class="line">  <span class="comment">// 如果是axios调用interceptors则表示全局拦截即谁调用interceptors就会在那个作用域拦截</span></span><br><span class="line">  <span class="comment">// 这里是instance调用的interceptors则表示这个模块内的拦截</span></span><br><span class="line">  <span class="comment">// request表示请求的拦截   response表示响应的拦截 </span></span><br><span class="line">  instance.interceptors.request.use(<span class="function"><span class="params">config</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 在请求成功的拦截中经常进行以下操作</span></span><br><span class="line">    <span class="comment">// 1.比如config中的一些信息不符合服务器的要求</span></span><br><span class="line">    <span class="comment">// 2.比如每次发送网络请求时, 都希望在界面中显示一个请求的图标</span></span><br><span class="line">    <span class="comment">// 3.某些网络请求(比如登录(token)), 必须携带一些特殊的信息</span></span><br><span class="line">    <span class="built_in">console</span>.log(config)  <span class="comment">// 这个config对象内存储的就是发送请求的配置信息</span></span><br><span class="line">    <span class="comment">// 记住拦截后要使用return config放行,不然后续就被禁止了</span></span><br><span class="line">    <span class="keyword">return</span> config</span><br><span class="line">  &#125;,<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 2.2.响应拦截</span></span><br><span class="line">  instance.interceptors.response.use(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(res);  // 这个res就是服务器返回的具体数据信息</span></span><br><span class="line">    <span class="comment">// 记住拦截后要使用return放行,不然后续就被禁止了</span></span><br><span class="line">    <span class="keyword">return</span> res.data</span><br><span class="line">  &#125;, <span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 3.发送真正请求</span></span><br><span class="line">  <span class="keyword">return</span> instance(config) <span class="comment">// 这里instance调用后可以使用then和catch方法,证明在源码中他返回的是一个promise对象,直接把他return出去,使用后就可以直接调用then和catch方法去做回调.</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当第三方库出现问题后直接修改该文件,将改用的另一种第三方库也返回一个promise对象即可.</span></span><br></pre></td></tr></table></figure>
+<p>此时在使用时就这样使用:</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;request&#125; <span class="keyword">from</span> <span class="string">&#x27;./network/request.js&#x27;</span></span><br><span class="line"></span><br><span class="line">request(&#123;</span><br><span class="line">  url: <span class="string">&#x27;/home/multidata&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(err)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="6-axios拦截器的使用"><a href="#6-axios拦截器的使用" class="headerlink" title="6. axios拦截器的使用"></a>6. axios拦截器的使用</h4><p> axios拦截器包括四种拦截器：</p>
+<ul>
+<li>请求成功与失败的拦截<br>需要拦截的axios实例.interceptors.request.use()<br>内部参数为两个函数第一个为成功的函数第二个为失败的函数</li>
+<li>响应成功与失败的拦截<br>需要拦截的axios实例.interceptors.response.use()</li>
+</ul>
+<p>具体代码请看上一步的网络模块封装中。</p>
+<h5 id="请求成功与失败的拦截"><a href="#请求成功与失败的拦截" class="headerlink" title="请求成功与失败的拦截"></a>请求成功与失败的拦截</h5><p>如果是axios调用interceptors则表示全局拦截即谁调用interceptors就会在那个作用域拦截<br>这里是instance调用的interceptors则表示这个模块内的拦截<br>request表示请求的拦截   response表示响应的拦截 </p>
+<p>在请求成功的拦截中经常进行以下操作<br> 1.比如config中的一些信息不符合服务器的要求<br> 2.比如每次发送网络请求时, 都希望在界面中显示一个请求的图标<br> 3.某些网络请求(比如登录(token)), 必须携带一些特殊的信息</p>
+<p>记住拦截后要使用return config放行,不然后续就被禁止了</p>
+<p>这个config对象内存储的就是发送请求的配置信息</p>
+<p>请求拦截中的config对象</p>
+<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/08-axios%E6%A1%86%E6%9E%B6/02.png" alt="image-20201226171451773"></p>
+<h5 id="响应成功与失败的拦截"><a href="#响应成功与失败的拦截" class="headerlink" title="响应成功与失败的拦截"></a>响应成功与失败的拦截</h5><p>这个res就是服务器返回的具体数据信息</p>
+<p>记住拦截后要使用return放行,不然后续就被禁止了（比如后续的then操作）</p>
 ]]></content>
       <categories>
         <category>Vue</category>
