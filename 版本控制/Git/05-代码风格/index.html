@@ -22,22 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Git初始化新仓库：git init git 目录  ​                    hooks                        目录包含客户端或服务端的钩子脚本； ​                    info                            包含一个全局性排除文件 ​                    logs">
+  <meta name="description" content="代码风格Eslint(js代码检查工具)仅使用eslint创建package.json文件(npm init -y) 首先本地安装eslint npm i eslint –save-dev 设置package.json文件 “scripts”: { ​    “lint”: “eslint src”, ​    “lint:create”: “eslint –init” } 在终端中输入npm r">
 <meta property="og:type" content="article">
-<meta property="og:title" content="03_Git、linux基本操作">
-<meta property="og:url" content="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="05_代码风格">
+<meta property="og:url" content="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/index.html">
 <meta property="og:site_name" content="Doran">
-<meta property="og:description" content="Git初始化新仓库：git init git 目录  ​                    hooks                        目录包含客户端或服务端的钩子脚本； ​                    info                            包含一个全局性排除文件 ​                    logs">
+<meta property="og:description" content="代码风格Eslint(js代码检查工具)仅使用eslint创建package.json文件(npm init -y) 首先本地安装eslint npm i eslint –save-dev 设置package.json文件 “scripts”: { ​    “lint”: “eslint src”, ​    “lint:create”: “eslint –init” } 在终端中输入npm r">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/01.png">
-<meta property="article:published_time" content="2021-01-01T08:02:08.000Z">
-<meta property="article:modified_time" content="2021-01-01T09:48:14.613Z">
+<meta property="article:published_time" content="2021-01-01T09:58:21.000Z">
+<meta property="article:modified_time" content="2021-01-01T09:58:52.255Z">
 <meta property="article:author" content="Doran">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/01.png">
 
-<link rel="canonical" href="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
 
 
 <script id="page-configurations">
@@ -50,7 +48,7 @@
   };
 </script>
 
-  <title>03_Git、linux基本操作 | Doran</title>
+  <title>05_代码风格 | Doran</title>
   
 
 
@@ -195,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
@@ -208,7 +206,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          03_Git、linux基本操作
+          05_代码风格
         </h1>
 
         <div class="post-meta">
@@ -219,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-01-01 16:02:08 / 修改时间：17:48:14" itemprop="dateCreated datePublished" datetime="2021-01-01T16:02:08+08:00">2021-01-01</time>
+              <time title="创建时间：2021-01-01 17:58:21 / 修改时间：17:58:52" itemprop="dateCreated datePublished" datetime="2021-01-01T17:58:21+08:00">2021-01-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -244,8 +242,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" itemprop="commentCount"></span>
+    <a title="valine" href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -255,7 +253,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>862</span>
+              <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -274,49 +272,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>初始化新仓库：git init</p>
-<p><font color="red"><strong>git 目录</strong></font></p>
-<p><img src="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/01.png" alt="git目录"></p>
-<p>​                    hooks                        目录包含客户端或服务端的钩子脚本；</p>
-<p>​                    info                            包含一个全局性排除文件</p>
-<p>​                    logs                            保存日志信息</p>
-<p>​                    <font color="red"><strong>objects                     目录存储所有数据内容；</strong></font></p>
-<p>​                    <font color="red"><strong>refs                            目录存储指向数据的提交对象的指针（所有分支）</strong></font></p>
-<p>​                    config                        文件包含项目特有的配置选项</p>
-<p>​                    description                用来显示对仓库的描述信息</p>
-<p>​                    <font color="red"><strong>head                        文件指示目前被检出的分支</strong></font></p>
-<p>​                    <font color="red"><strong>index                        文件保存暂存区信息</strong></font></p>
-<h3 id="git-底层命令："><a href="#git-底层命令：" class="headerlink" title="git 底层命令："></a>git 底层命令：</h3><p><strong>git 对象</strong></p>
-<p>​        <font color="blue">git hash-object -w 文件路径</font>（生成一个key(hash值)和val的键值对，并将其<strong>存入.git/objects</strong>）</p>
-<p><strong>tree对象</strong></p>
-<p>​        <font color="blue">git update-index –add –cacheinfo 10064 hash值 text.txt </font>(此时没有生成树对象,只是向暂存区添加一条记录,让git对象对应上传文件名,并将其<strong>存入.git/index</strong>)</p>
-<p>​        <font color="blue">git write-tree</font> (生成树对象,并将其<strong>存入.git/objects</strong>)</p>
-<p><strong>commit对象</strong></p>
-<p>​        <font color="blue">echo ‘内容’ / git commit-tree treehash值</font>  (生成一个提交对象并将其<strong>存入.git/objects</strong>)</p>
-<p><strong>对以上对象的查询:</strong></p>
-<p>​        <font color="blue">git cat-file -p hash值</font>  (拿对应对象的内容)</p>
-<p>​        <font color="blue">git cat-file -t hash值</font>  (拿对应对象的类型)</p>
-<p><strong>查看暂存区:</strong></p>
-<p>​        <font color="cornflowerblue">git ls-files -s</font></p>
-<h2 id="基础的linux命令"><a href="#基础的linux命令" class="headerlink" title="基础的linux命令"></a>基础的linux命令</h2><p><strong>clear</strong> ：清除屏幕</p>
-<p><strong>echo ‘test content’**：往控制台输出信息 **echo ‘test content’ &gt; test.txt</strong></p>
-<p><strong>ll</strong>：将当前目录下的 子文件&amp;子目录平铺在控制台</p>
-<p><strong>find</strong> <strong>目录名</strong>： 将对应目录下的子孙文件&amp;子孙目录平铺在控制台</p>
-<p><strong>find</strong> <strong>目录名</strong> <strong>-type f</strong> ：将对应目录下的文件平铺在控制台</p>
-<p><strong>rm</strong>  <strong>文件名 ：</strong> 删除文件</p>
-<p><strong>mv</strong> <strong>源文件 重命名文件</strong>: 重命名</p>
-<p><strong>cat</strong> <strong>文件的</strong> <strong>url :</strong> 查看对应文件的内容</p>
-<h4 id="vim-文件的-url-在英文模式下"><a href="#vim-文件的-url-在英文模式下" class="headerlink" title="vim 文件的 url(在英文模式下)"></a>vim 文件的 url(在英文模式下)</h4><ul>
-<li><p>按 i 进插入模式 进行文件的编辑按 esc 键&amp;按:键 进行命令的执行</p>
-</li>
-<li><p>q!   强制退出（不保存）</p>
-</li>
-<li><p>wq  保存退出</p>
-</li>
-<li><p>set nu 设置行号</p>
-</li>
-</ul>
-<p>​    </p>
+        <h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><h2 id="Eslint-js代码检查工具"><a href="#Eslint-js代码检查工具" class="headerlink" title="Eslint(js代码检查工具)"></a>Eslint(js代码检查工具)</h2><h3 id="仅使用eslint"><a href="#仅使用eslint" class="headerlink" title="仅使用eslint"></a>仅使用eslint</h3><p><strong>创建package.json文件(npm init -y)</strong></p>
+<p><strong>首先本地安装eslint</strong></p>
+<p><font color="cornflowerblue"><strong>npm i eslint –save-dev</strong></font></p>
+<p><strong>设置package.json文件</strong></p>
+<p><strong>“scripts”: {</strong></p>
+<p>​    <strong>“lint”: “eslint src”,</strong></p>
+<p>​    <strong>“lint:create”: “eslint –init”</strong></p>
+<p><strong>}</strong></p>
+<p><strong>在终端中输入npm run lint:create(等价于执行npm eslint –init)</strong></p>
+<p>出现的问题:</p>
+<p>1.你想要怎么使用eslint (只是检查语法，检查语法找到问题，检查语法找到问题并强制保存编码风格)    3</p>
+<p>2.哪一种模块化方案你要去使用    3</p>
+<p>3.哪一种框架    3</p>
+<p>4.你用不用typescript    n</p>
+<p>5.你的项目跑在那儿(浏览器，node)    1</p>
+<p>6.你想要怎么去定义一个风格(使用流行的向导，回答问题去自定义，导入配置文件)    1</p>
+<p>7.哪一个向导你想要使用(Airbnb，标准，谷歌)    2</p>
+<p>8.哪种配置文件你想要(js，yaml，json)    1</p>
+<p>9.你希望让npm帮你装依赖的包吗    y</p>
+<p><strong>完成后会生成 .eslintrc.js 文件。提供编码规则</strong></p>
+<p><strong>装完之后以后在该项目的终端中输入npm run lint命令就会去验证跟根目录下的src文件夹下的js代码</strong></p>
+<p>此时存在的问题是你可以不去通过eslint的约束而直接提交到git上</p>
+<h3 id="eslint配合husky-哈士奇-和Git使用"><a href="#eslint配合husky-哈士奇-和Git使用" class="headerlink" title="eslint配合husky(哈士奇)和Git使用"></a>eslint配合husky(哈士奇)和Git使用</h3><p><strong>在装husky之前一定要先创建Git仓库，因为他要像git中添加钩子</strong></p>
+<p><strong>安装husky</strong></p>
+<p><font color="blue">npm i husky –save-dev</font></p>
+<p><strong>设置package.json文件</strong></p>
+<p>{</p>
+<p>​    “husky”: {<br>​            “hooks”: {<br>​                  “pre-commit”: “npm run lint”<br>​                  //在git commit之前一定要通过npm run lint的检查<br>​                  // 只有npm run lint不报错时 commit才能真正的运行<br>​            }</p>
+<p>​    }  </p>
+<p>}</p>
+<p>配置之后再向git提交就会自动调用eslint验证js代码</p>
+<h2 id="Editor-Config"><a href="#Editor-Config" class="headerlink" title="Editor Config"></a>Editor Config</h2><p>​        EditorConfig 帮助开发人员定义和维护不同编辑器之间一致的编码风格。EditorConfig 项目由定义编码样式的文件格式和一组文本编辑器插件组成，这些插件使编辑器能够读取文件格式并坚持已定义的样式。编辑器配置文件易于阅读，并且可以很好地与版本控制系统一起工作</p>
+<p>​        你只需配置一个 .editorconfig 文件，在其中设置好要遵守的代码规范，放在项目的根目录下，就能够在几乎所有的主流 IDE 和编辑器中复用了，可以将 .editorconfig 文件也提交到版本控制系统中，就不需要针对不同 IDE 和编辑器再单独进行设置了。</p>
 
     </div>
 
@@ -353,12 +341,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">03_Git、linux基本操作</a></p>
+  <p><span>本文标题:</span><a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/">05_代码风格</a></p>
   <p><span>文章作者:</span><a href="/" title="访问  的个人博客">Doran</a></p>
-  <p><span>发布时间:</span>2021年01月01日 - 16:02</p>
-  <p><span>最后更新:</span>2021年01月01日 - 17:48</p>
-  <p><span>原始链接:</span><a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" title="03_Git、linux基本操作">http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/03-Git%E3%80%81linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2021年01月01日 - 17:58</p>
+  <p><span>最后更新:</span>2021年01月01日 - 17:58</p>
+  <p><span>原始链接:</span><a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/" title="05_代码风格">http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://example.com/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -400,13 +388,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/02-Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/" rel="prev" title="02_Git的基本理论">
-      <i class="fa fa-chevron-left"></i> 02_Git的基本理论
+    <a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/04-Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" rel="prev" title="04_Git常用操作">
+      <i class="fa fa-chevron-left"></i> 04_Git常用操作
     </a></div>
-      <div class="post-nav-item">
-    <a href="/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/04-Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" rel="next" title="04_Git常用操作">
-      04_Git常用操作 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -466,7 +451,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">1.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-%E5%BA%95%E5%B1%82%E5%91%BD%E4%BB%A4%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">git 底层命令：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E7%9A%84linux%E5%91%BD%E4%BB%A4"><span class="nav-number">2.</span> <span class="nav-text">基础的linux命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#vim-%E6%96%87%E4%BB%B6%E7%9A%84-url-%E5%9C%A8%E8%8B%B1%E6%96%87%E6%A8%A1%E5%BC%8F%E4%B8%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text">vim 文件的 url(在英文模式下)</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC"><span class="nav-number">1.</span> <span class="nav-text">代码风格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Eslint-js%E4%BB%A3%E7%A0%81%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">Eslint(js代码检查工具)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%85%E4%BD%BF%E7%94%A8eslint"><span class="nav-number">1.1.1.</span> <span class="nav-text">仅使用eslint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eslint%E9%85%8D%E5%90%88husky-%E5%93%88%E5%A3%AB%E5%A5%87-%E5%92%8CGit%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.2.</span> <span class="nav-text">eslint配合husky(哈士奇)和Git使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Editor-Config"><span class="nav-number">1.2.</span> <span class="nav-text">Editor Config</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
