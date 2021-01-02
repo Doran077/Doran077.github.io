@@ -23,12 +23,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="1. 什么是路由?1.1 认识路由路由(routing)就是通过互联的网络把信息从源地址传输到目的地址的活动  路由器提供了两种机制: 路由和转送.  路由是决定数据包从来源到目的地的路径. 转送将输入端的数据转移到合适的输出端.   路由中有一个非常重要的概念叫路由表.  路由表本质上就是一个映射表, 决定了数据包的指向     1.2 前端路由的发展1.2.1 后端路由(后端渲染)后端路由简介">
+  <meta name="description" content="1. 什么是路由?1.1 认识路由路由(routing)就是通过互联的网络把信息从源地址传输到目的地址的活动  路由器提供了两种机制: 路由和转送. 路由是决定数据包从来源到目的地的路径. 转送将输入端的数据转移到合适的输出端.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="06_Vue-router路由插件">
 <meta property="og:url" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/index.html">
 <meta property="og:site_name" content="Doran">
-<meta property="og:description" content="1. 什么是路由?1.1 认识路由路由(routing)就是通过互联的网络把信息从源地址传输到目的地址的活动  路由器提供了两种机制: 路由和转送.  路由是决定数据包从来源到目的地的路径. 转送将输入端的数据转移到合适的输出端.   路由中有一个非常重要的概念叫路由表.  路由表本质上就是一个映射表, 决定了数据包的指向     1.2 前端路由的发展1.2.1 后端路由(后端渲染)后端路由简介">
+<meta property="og:description" content="1. 什么是路由?1.1 认识路由路由(routing)就是通过互联的网络把信息从源地址传输到目的地址的活动  路由器提供了两种机制: 路由和转送. 路由是决定数据包从来源到目的地的路径. 转送将输入端的数据转移到合适的输出端.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/01.png">
 <meta property="og:image" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/02.png">
@@ -55,7 +55,7 @@
 <meta property="og:image" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/23.png">
 <meta property="og:image" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/24.png">
 <meta property="article:published_time" content="2021-01-01T12:48:18.000Z">
-<meta property="article:modified_time" content="2021-01-01T13:13:15.799Z">
+<meta property="article:modified_time" content="2021-01-02T13:27:49.571Z">
 <meta property="article:author" content="Doran">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -242,10 +242,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-01-01 20:48:18 / 修改时间：21:13:15" itemprop="dateCreated datePublished" datetime="2021-01-01T20:48:18+08:00">2021-01-01</time>
+              <time title="创建时间：2021-01-01 20:48:18" itemprop="dateCreated datePublished" datetime="2021-01-01T20:48:18+08:00">2021-01-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-02 21:27:49" itemprop="dateModified" datetime="2021-01-02T21:27:49+08:00">2021-01-02</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -301,14 +307,16 @@
       
         <h2 id="1-什么是路由"><a href="#1-什么是路由" class="headerlink" title="1. 什么是路由?"></a>1. 什么是路由?</h2><h3 id="1-1-认识路由"><a href="#1-1-认识路由" class="headerlink" title="1.1 认识路由"></a>1.1 认识路由</h3><p>路由(routing)就是通过互联的网络把信息从源地址传输到目的地址的活动</p>
 <ul>
-<li><p>路由器提供了两种机制: 路由和转送.</p>
-<ul>
+<li>路由器提供了两种机制: 路由和转送.<ul>
 <li>路由是决定数据包从<strong>来源</strong>到<strong>目的地</strong>的路径.</li>
 <li>转送将<strong>输入端</strong>的数据转移到合适的<strong>输出端</strong>.</li>
 </ul>
 </li>
-<li><p>路由中有一个非常重要的概念叫路由表.</p>
+</ul>
+<a id="more"></a>
+
 <ul>
+<li>路由中有一个非常重要的概念叫路由表.<ul>
 <li>路由表本质上就是一个映射表, 决定了数据包的指向</li>
 </ul>
 </li>
@@ -566,7 +574,7 @@
   <p><span>本文标题:</span><a href="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/">06_Vue-router路由插件</a></p>
   <p><span>文章作者:</span><a href="/" title="访问  的个人博客">Doran</a></p>
   <p><span>发布时间:</span>2021年01月01日 - 20:48</p>
-  <p><span>最后更新:</span>2021年01月01日 - 21:13</p>
+  <p><span>最后更新:</span>2021年01月02日 - 21:27</p>
   <p><span>原始链接:</span><a href="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/" title="06_Vue-router路由插件">http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/"  aria-label="复制成功！"></i></span>
   </p>

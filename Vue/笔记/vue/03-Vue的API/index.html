@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Vue的基础操作插值的操作（Mustache语法）将数据显示在标签内容中v-once数据不会变化 v-for&#x3D;“item in movies”（item为双大括号的绑定数据movies为vue中的数组,表示item会循环遍历该数组呈现该数组中的数据） v-on:click &#x3D; “函数名或执行代码”    语法糖：@click &#x3D; “函数名或执行代码”（绑定事件及其回调函数） v-html&#x3D;”变量名">
+  <meta name="description" content="Vue的基础操作插值的操作（Mustache语法）将数据显示在标签内容中v-once数据不会变化 v-for&#x3D;“item in movies”（item为双大括号的绑定数据movies为vue中的数组,表示item会循环遍历该数组呈现该数组中的数据）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="03_Vue的API">
 <meta property="og:url" content="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/03-Vue%E7%9A%84API/index.html">
 <meta property="og:site_name" content="Doran">
-<meta property="og:description" content="Vue的基础操作插值的操作（Mustache语法）将数据显示在标签内容中v-once数据不会变化 v-for&#x3D;“item in movies”（item为双大括号的绑定数据movies为vue中的数组,表示item会循环遍历该数组呈现该数组中的数据） v-on:click &#x3D; “函数名或执行代码”    语法糖：@click &#x3D; “函数名或执行代码”（绑定事件及其回调函数） v-html&#x3D;”变量名">
+<meta property="og:description" content="Vue的基础操作插值的操作（Mustache语法）将数据显示在标签内容中v-once数据不会变化 v-for&#x3D;“item in movies”（item为双大括号的绑定数据movies为vue中的数组,表示item会循环遍历该数组呈现该数组中的数据）">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-01T12:30:44.000Z">
-<meta property="article:modified_time" content="2021-01-01T13:13:01.369Z">
+<meta property="article:modified_time" content="2021-01-02T13:28:02.155Z">
 <meta property="article:author" content="Doran">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
@@ -217,10 +217,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-01-01 20:30:44 / 修改时间：21:13:01" itemprop="dateCreated datePublished" datetime="2021-01-01T20:30:44+08:00">2021-01-01</time>
+              <time title="创建时间：2021-01-01 20:30:44" itemprop="dateCreated datePublished" datetime="2021-01-01T20:30:44+08:00">2021-01-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-02 21:28:02" itemprop="dateModified" datetime="2021-01-02T21:28:02+08:00">2021-01-02</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -276,6 +282,8 @@
       
         <h1 id="Vue的基础操作"><a href="#Vue的基础操作" class="headerlink" title="Vue的基础操作"></a>Vue的基础操作</h1><h2 id="插值的操作（Mustache语法）"><a href="#插值的操作（Mustache语法）" class="headerlink" title="插值的操作（Mustache语法）"></a>插值的操作（Mustache语法）</h2><h3 id="将数据显示在标签内容中"><a href="#将数据显示在标签内容中" class="headerlink" title="将数据显示在标签内容中"></a>将数据显示在标签内容中</h3><p>v-once数据不会变化</p>
 <p>v-for=“item in movies”（item为双大括号的绑定数据movies为vue中的数组,表示item会循环遍历该数组呈现该数组中的数据）</p>
+<a id="more"></a>
+
 <p>v-on:click = “函数名或执行代码”    <font color="Cyan"><strong>语法糖：@click</strong></font> = “函数名或执行代码”（绑定事件及其回调函数）</p>
 <p>v-html=”变量名”（该指令表示传入的(变量名)数据是html的格式,在解析时会将其解析为html）</p>
 <p>v-cloak 将这个指令添加在vue管理DOM区域的便签属性上，再在css中添加[v-cloak]{display: none; }。就会使得在页面没有解析到vue代码时，会隐藏Mustache语法。给用户更好的体验。</p>
@@ -636,7 +644,7 @@
   <p><span>本文标题:</span><a href="/Vue/%E7%AC%94%E8%AE%B0/vue/03-Vue%E7%9A%84API/">03_Vue的API</a></p>
   <p><span>文章作者:</span><a href="/" title="访问  的个人博客">Doran</a></p>
   <p><span>发布时间:</span>2021年01月01日 - 20:30</p>
-  <p><span>最后更新:</span>2021年01月01日 - 21:13</p>
+  <p><span>最后更新:</span>2021年01月02日 - 21:28</p>
   <p><span>原始链接:</span><a href="/Vue/%E7%AC%94%E8%AE%B0/vue/03-Vue%E7%9A%84API/" title="03_Vue的API">http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/03-Vue%E7%9A%84API/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://example.com/Vue/%E7%AC%94%E8%AE%B0/vue/03-Vue%E7%9A%84API/"  aria-label="复制成功！"></i></span>
   </p>
