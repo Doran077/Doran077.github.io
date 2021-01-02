@@ -1197,7 +1197,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #82ff74;
+  background: #ffdaff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2768,8 +2768,12 @@ body {
 .header-inner {
   background: rgba(255,255,255,0.9);
 }
-.site-meta {
+.site-brand-container {
   background-image: url("/images/bac3.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+.header-inner,
+.sidebar-inner {
+  margin-top: 20px;
 }
