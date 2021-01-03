@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01_git 简介</title>
-    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/01-git-%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<h3 id="集中式-svn"><a href="#集中式-svn" class="headerlink" title="集中式(svn)"></a>集中式(svn)</h3><p>svn因为每次存的都是差异 需要的硬盘空间会相对的小一点  可是回滚的速度会很慢<br>优点:<br>    代码存放在单一的服务器上 便于项目的管理</p>
-<a id="more"></a>
-
-<p>缺点:<br>    服务器宕机: 员工写的代码得不到保障<br>    服务器炸了: 整个项目的历史记录都会丢失</p>
-<h3 id="分布式-git"><a href="#分布式-git" class="headerlink" title="分布式(git)"></a>分布式(git)</h3><p>git每次存的都是项目的完整快照 需要的硬盘空间会相对大一点<br>    (Git团队对代码做了极致的压缩 最终需要的实际空间比svn多不了太多 可是Git的回滚速度极快)<br>优点:<br>    完全的分布式<br>缺点:<br>    学习起来比SVN难一点</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>02_Git的基本理论</title>
     <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/02-Git%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA/</url>
     <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>类似于qq的下一步 下一步</p>
@@ -27,7 +9,7 @@
 <a id="more"></a>
 
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#x79;&#x73;&#x6a;&#x31;&#56;&#x30;&#x33;&#55;&#51;&#x31;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;">&#x79;&#x73;&#x6a;&#x31;&#56;&#x30;&#x33;&#55;&#51;&#x31;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>git config –global user.email <a href="mailto:&#121;&#x73;&#x6a;&#49;&#x38;&#x30;&#51;&#x37;&#x33;&#49;&#x36;&#52;&#51;&#51;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;">&#121;&#x73;&#x6a;&#49;&#x38;&#x30;&#51;&#x37;&#x33;&#49;&#x36;&#52;&#51;&#51;&#x40;&#x31;&#54;&#51;&#x2e;&#x63;&#x6f;&#109;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -42,6 +24,24 @@
 <p>​                    键值对在Git内部是一个<font color="red"><strong>blob类型</strong></font></p>
 <p><font color="deeppink"><strong>树对象</strong></font>（代表项目的一次次版本）</p>
 <p><font color="deeppink"><strong>提交对象</strong></font>(对每次提交版本的封装，包括注释)</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01_git 简介</title>
+    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/01-git-%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<h3 id="集中式-svn"><a href="#集中式-svn" class="headerlink" title="集中式(svn)"></a>集中式(svn)</h3><p>svn因为每次存的都是差异 需要的硬盘空间会相对的小一点  可是回滚的速度会很慢<br>优点:<br>    代码存放在单一的服务器上 便于项目的管理</p>
+<a id="more"></a>
+
+<p>缺点:<br>    服务器宕机: 员工写的代码得不到保障<br>    服务器炸了: 整个项目的历史记录都会丢失</p>
+<h3 id="分布式-git"><a href="#分布式-git" class="headerlink" title="分布式(git)"></a>分布式(git)</h3><p>git每次存的都是项目的完整快照 需要的硬盘空间会相对大一点<br>    (Git团队对代码做了极致的压缩 最终需要的实际空间比svn多不了太多 可是Git的回滚速度极快)<br>优点:<br>    完全的分布式<br>缺点:<br>    学习起来比SVN难一点</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
 ]]></content>
       <categories>
@@ -153,6 +153,42 @@
       </tags>
   </entry>
   <entry>
+    <title>07_总结</title>
+    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/07-%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>git –version</p>
+</li>
+<li><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a><strong>初始化配置</strong></h3><p>git config –global user.name “damu”<br>git config –global user.email </p>
+<p>git config –list</p>
+<a id="more"></a>
+</li>
+<li><h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>git init</p>
+</li>
+<li><h3 id="C-新增"><a href="#C-新增" class="headerlink" title="C(新增)"></a><strong>C(新增)</strong></h3><p>在工作目录中新增文件<br>git status<br>git add ./<br>git commit -m “msg”  </p>
+</li>
+<li><h3 id="U-修改"><a href="#U-修改" class="headerlink" title="U(修改)"></a><strong>U(修改)</strong></h3><p>在工作目录中修改文件<br>git status<br>git add ./<br>git commit -m “msg”</p>
+</li>
+<li><h3 id="D-删除-amp-重命名"><a href="#D-删除-amp-重命名" class="headerlink" title="D(删除&amp;重命名)"></a><strong>D(删除&amp;重命名)</strong></h3><p>git rm 要删除的文件     git mv 老文件 新文件<br>git  status             git  status<br>git commit -m “msg”     git commit -m “msg”</p>
+</li>
+<li><h3 id="R-查询"><a href="#R-查询" class="headerlink" title="R(查询)"></a><strong>R(查询)</strong></h3><p>git  status   :  查看工作目录中文件的状态(已跟踪(已提交 已暂存 已修改) 未跟踪)<br>git  diff     :  查看未暂存的修改<br>git  diff –cache : 查看未提交的暂存<br>git  log –oneline : 查看提交记录</p>
+</li>
+<li><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a><strong>分支</strong></h3><p>分支的本质其实就是一个提交对象!!!<br>HEAD: </p>
+<pre><code>是一个指针 它默认指向master分支 切换分支时其实就是让HEAD指向不同的分支
+每次有新的提交时 HEAD都会带着当前指向的分支 一起往前移动</code></pre>
+<p>git  log –oneline –decorate –graph –all : 查看整个项目的分支图<br>git branch : 查看分支列表<br>git branch -v: 查看分支指向的最新的提交<br>git branch name : 在当前提交对象上创建新的分支<br>git branch name commithash: 在指定的提交对象上创建新的分支<br>git checkout name :     切换分支<br>git branch -d name : 删除空的分支 删除已经被合并的分支<br>git branch -D name : 强制删除分支</p>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>06_远程仓库</title>
     <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/06-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<h3 id="三个必须懂的概念"><a href="#三个必须懂的概念" class="headerlink" title="三个必须懂的概念"></a>三个必须懂的概念</h3><p>本地分支<br>远程跟踪分支(remote/分支名)<br>远程分支</p>
@@ -227,39 +263,28 @@
       </tags>
   </entry>
   <entry>
-    <title>07_总结</title>
-    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/07-%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>git –version</p>
-</li>
-<li><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a><strong>初始化配置</strong></h3><p>git config –global user.name “damu”<br>git config –global user.email </p>
-<p>git config –list</p>
+    <title>02_Vue的使用</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
+<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
+<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
 <a id="more"></a>
-</li>
-<li><h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>git init</p>
-</li>
-<li><h3 id="C-新增"><a href="#C-新增" class="headerlink" title="C(新增)"></a><strong>C(新增)</strong></h3><p>在工作目录中新增文件<br>git status<br>git add ./<br>git commit -m “msg”  </p>
-</li>
-<li><h3 id="U-修改"><a href="#U-修改" class="headerlink" title="U(修改)"></a><strong>U(修改)</strong></h3><p>在工作目录中修改文件<br>git status<br>git add ./<br>git commit -m “msg”</p>
-</li>
-<li><h3 id="D-删除-amp-重命名"><a href="#D-删除-amp-重命名" class="headerlink" title="D(删除&amp;重命名)"></a><strong>D(删除&amp;重命名)</strong></h3><p>git rm 要删除的文件     git mv 老文件 新文件<br>git  status             git  status<br>git commit -m “msg”     git commit -m “msg”</p>
-</li>
-<li><h3 id="R-查询"><a href="#R-查询" class="headerlink" title="R(查询)"></a><strong>R(查询)</strong></h3><p>git  status   :  查看工作目录中文件的状态(已跟踪(已提交 已暂存 已修改) 未跟踪)<br>git  diff     :  查看未暂存的修改<br>git  diff –cache : 查看未提交的暂存<br>git  log –oneline : 查看提交记录</p>
-</li>
-<li><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a><strong>分支</strong></h3><p>分支的本质其实就是一个提交对象!!!<br>HEAD: </p>
-<pre><code>是一个指针 它默认指向master分支 切换分支时其实就是让HEAD指向不同的分支
-每次有新的提交时 HEAD都会带着当前指向的分支 一起往前移动</code></pre>
-<p>git  log –oneline –decorate –graph –all : 查看整个项目的分支图<br>git branch : 查看分支列表<br>git branch -v: 查看分支指向的最新的提交<br>git branch name : 在当前提交对象上创建新的分支<br>git branch name commithash: 在指定的提交对象上创建新的分支<br>git checkout name :     切换分支<br>git branch -d name : 删除空的分支 删除已经被合并的分支<br>git branch -D name : 强制删除分支</p>
-</li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
+
+<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
+<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
+<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
+<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
+<p>记住dom渲染完毕，是在mounted</p>
+<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
+<p><a href="https://imgchr.com/i/s9SqhV"><img src="https://s3.ax1x.com/2021/01/03/s9SqhV.png" alt="s9SqhV.png"></a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 ]]></content>
       <categories>
-        <category>版本控制</category>
-        <category>Git</category>
+        <category>Vue</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>Vue</tag>
       </tags>
   </entry>
   <entry>
@@ -294,20 +319,38 @@
       </tags>
   </entry>
   <entry>
-    <title>02_Vue的使用</title>
-    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
-<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
-<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
+    <title>04_有关webpack</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/04-%E6%9C%89%E5%85%B3webpack/</url>
+    <content><![CDATA[<h4 id="1-什么是webpack"><a href="#1-什么是webpack" class="headerlink" title="1. 什么是webpack"></a>1. 什么是webpack</h4><ul>
+<li>webpack和gulp对比</li>
+<li>webpack依赖环境</li>
+<li>安装webpack</li>
+</ul>
 <a id="more"></a>
 
-<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
-<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
-<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
-<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
-<p>记住dom渲染完毕，是在mounted</p>
-<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
-<p><a href="https://imgchr.com/i/s9SqhV"><img src="https://s3.ax1x.com/2021/01/03/s9SqhV.png" alt="s9SqhV.png"></a></p>
+<h4 id="2-webpack的起步"><a href="#2-webpack的起步" class="headerlink" title="2. webpack的起步"></a>2. webpack的起步</h4><ul>
+<li>webpack命令</li>
+<li>webpack配置: webpack.config.js/package.json(scripts)</li>
+</ul>
+<p>文件目录解析：</p>
+<p><a href="https://imgchr.com/i/s9pSB9"><img src="https://s3.ax1x.com/2021/01/03/s9pSB9.png" alt="s9pSB9.png"></a></p>
+<h4 id="3-webpack的loader"><a href="#3-webpack的loader" class="headerlink" title="3. webpack的loader"></a>3. webpack的loader</h4><ul>
+<li>css-loader/style-loader</li>
+<li>less-loader/less</li>
+<li>url-loader/file-loader</li>
+<li>babel-loader</li>
+</ul>
+<h4 id="4-webpack中配置Vue"><a href="#4-webpack中配置Vue" class="headerlink" title="4. webpack中配置Vue"></a>4. webpack中配置Vue</h4><ul>
+<li>vue-loader</li>
+</ul>
+<p>模板快捷键：default</p>
+<p><strong>安装vue-loader和vue-template-compiler</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-loader vue-template-compiler --save-dev</span><br></pre></td></tr></table></figure>
+<h4 id="5-webpack的plugin"><a href="#5-webpack的plugin" class="headerlink" title="5. webpack的plugin"></a>5. webpack的plugin</h4><h4 id="6-搭建本地服务器"><a href="#6-搭建本地服务器" class="headerlink" title="6. 搭建本地服务器"></a>6. 搭建本地服务器</h4><ul>
+<li>webpack-dev-server</li>
+</ul>
+<h4 id="7-配置文件的分离"><a href="#7-配置文件的分离" class="headerlink" title="7. 配置文件的分离"></a>7. 配置文件的分离</h4><h4 id="执行npm-run-build的过程"><a href="#执行npm-run-build的过程" class="headerlink" title="执行npm run build的过程"></a><font color="red">执行npm run build的过程</font></h4><p><a href="https://imgchr.com/i/s9pCA1"><img src="https://s3.ax1x.com/2021/01/03/s9pCA1.png" alt="s9pCA1.png"></a></p>
+<h4 id="执行npm-run-dev的过程"><a href="#执行npm-run-dev的过程" class="headerlink" title="执行npm run dev的过程"></a><font color="red">执行npm run dev的过程</font></h4><p><a href="https://imgchr.com/i/s9pih6"><img src="https://s3.ax1x.com/2021/01/03/s9pih6.png" alt="s9pih6.png"></a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 ]]></content>
       <categories>
@@ -375,49 +418,6 @@
 <h3 id="2-2-配置去哪儿了"><a href="#2-2-配置去哪儿了" class="headerlink" title="2.2 配置去哪儿了"></a>2.2 配置去哪儿了</h3><h4 id="2-2-1-第一种方式-使用vue-ui"><a href="#2-2-1-第一种方式-使用vue-ui" class="headerlink" title="2.2.1 第一种方式:使用vue ui"></a>2.2.1 第一种方式:使用vue ui</h4><p>在本地安装vue/cli时会同时安装了vue，在vue中包含了vue ui。在哪个目录下都可以使用，他管理的是本地服务器。然后导入项目中，即可查看该项目的配置。</p>
 <h4 id="2-2-2-第二种方式-在文件目录中查找"><a href="#2-2-2-第二种方式-在文件目录中查找" class="headerlink" title="2.2.2 第二种方式:在文件目录中查找"></a>2.2.2 第二种方式:在文件目录中查找</h4><p>在node_modules@vue\cli-service\webpack.config.js中</p>
 <h4 id="2-2-3-当需要修改默认配置"><a href="#2-2-3-当需要修改默认配置" class="headerlink" title="2.2.3 当需要修改默认配置"></a><font color="red">2.2.3 当需要修改默认配置</font></h4><p>在项目文件夹根目录下创建一个vue.config.js配置文件（文件名不能修改）</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>04_有关webpack</title>
-    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/04-%E6%9C%89%E5%85%B3webpack/</url>
-    <content><![CDATA[<h4 id="1-什么是webpack"><a href="#1-什么是webpack" class="headerlink" title="1. 什么是webpack"></a>1. 什么是webpack</h4><ul>
-<li>webpack和gulp对比</li>
-<li>webpack依赖环境</li>
-<li>安装webpack</li>
-</ul>
-<a id="more"></a>
-
-<h4 id="2-webpack的起步"><a href="#2-webpack的起步" class="headerlink" title="2. webpack的起步"></a>2. webpack的起步</h4><ul>
-<li>webpack命令</li>
-<li>webpack配置: webpack.config.js/package.json(scripts)</li>
-</ul>
-<p>文件目录解析：</p>
-<p><a href="https://imgchr.com/i/s9pSB9"><img src="https://s3.ax1x.com/2021/01/03/s9pSB9.png" alt="s9pSB9.png"></a></p>
-<h4 id="3-webpack的loader"><a href="#3-webpack的loader" class="headerlink" title="3. webpack的loader"></a>3. webpack的loader</h4><ul>
-<li>css-loader/style-loader</li>
-<li>less-loader/less</li>
-<li>url-loader/file-loader</li>
-<li>babel-loader</li>
-</ul>
-<h4 id="4-webpack中配置Vue"><a href="#4-webpack中配置Vue" class="headerlink" title="4. webpack中配置Vue"></a>4. webpack中配置Vue</h4><ul>
-<li>vue-loader</li>
-</ul>
-<p>模板快捷键：default</p>
-<p><strong>安装vue-loader和vue-template-compiler</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue-loader vue-template-compiler --save-dev</span><br></pre></td></tr></table></figure>
-<h4 id="5-webpack的plugin"><a href="#5-webpack的plugin" class="headerlink" title="5. webpack的plugin"></a>5. webpack的plugin</h4><h4 id="6-搭建本地服务器"><a href="#6-搭建本地服务器" class="headerlink" title="6. 搭建本地服务器"></a>6. 搭建本地服务器</h4><ul>
-<li>webpack-dev-server</li>
-</ul>
-<h4 id="7-配置文件的分离"><a href="#7-配置文件的分离" class="headerlink" title="7. 配置文件的分离"></a>7. 配置文件的分离</h4><h4 id="执行npm-run-build的过程"><a href="#执行npm-run-build的过程" class="headerlink" title="执行npm run build的过程"></a><font color="red">执行npm run build的过程</font></h4><p><a href="https://imgchr.com/i/s9pCA1"><img src="https://s3.ax1x.com/2021/01/03/s9pCA1.png" alt="s9pCA1.png"></a></p>
-<h4 id="执行npm-run-dev的过程"><a href="#执行npm-run-dev的过程" class="headerlink" title="执行npm run dev的过程"></a><font color="red">执行npm run dev的过程</font></h4><p><a href="https://imgchr.com/i/s9pih6"><img src="https://s3.ax1x.com/2021/01/03/s9pih6.png" alt="s9pih6.png"></a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 ]]></content>
       <categories>
