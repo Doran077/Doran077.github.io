@@ -405,15 +405,15 @@
 <ul>
 <li>使用方式2：</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/05-Vue-Cli/07.png" alt="image-20201221084906444"></p>
+<p><a href="https://imgchr.com/i/s9PBCt"><img src="https://s3.ax1x.com/2021/01/03/s9PBCt.png" alt="s9PBCt.png"></a></p>
 <p>在.vue文件中的template模板，不需要进行template –&gt; ast –&gt;render –&gt; vdom –&gt; UI 中的前两步。</p>
 <p><strong><font color="red">那么.vue文件中的template是由谁处理了呢？</font></strong><br>因为在解析.vue文件时，会经过<font color="red">vue-template-compiler</font>（安装vue时安装过的）来将.vue文件进行解析成一个对象。该对象中的template会被解析为render函数。</p>
 <h2 id="二-Vue-Cli3"><a href="#二-Vue-Cli3" class="headerlink" title="二. Vue Cli3"></a>二. Vue Cli3</h2><p>在vue cli2中使用了flow-type(Facebook)<br>vue cli3中使用的是TypeScript(微软)</p>
 <h3 id="2-1-创建cli3项目"><a href="#2-1-创建cli3项目" class="headerlink" title="2.1 创建cli3项目"></a>2.1 创建cli3项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vue create 项目名称</span><br></pre></td></tr></table></figure>
 <p>选择配置</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/05-Vue-Cli/08.png" alt="image-20201221100417100"></p>
+<p><a href="https://imgchr.com/i/s9Prgf"><img src="https://s3.ax1x.com/2021/01/03/s9Prgf.png" alt="s9Prgf.png"></a></p>
 <p>目录结构分析</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/05-Vue-Cli/09.png" alt="image-20201221100440023"></p>
+<p><a href="https://imgchr.com/i/s9PD8P"><img src="https://s3.ax1x.com/2021/01/03/s9PD8P.png" alt="s9PD8P.png"></a></p>
 <p>在cli3中的.vue文件的vue的el属性写成了vue.$mount<br>原因:vue中el属性(vue管理的区域)在源码中是：vue.el等价于vue.$mount</p>
 <h3 id="2-2-配置去哪儿了"><a href="#2-2-配置去哪儿了" class="headerlink" title="2.2 配置去哪儿了"></a>2.2 配置去哪儿了</h3><h4 id="2-2-1-第一种方式-使用vue-ui"><a href="#2-2-1-第一种方式-使用vue-ui" class="headerlink" title="2.2.1 第一种方式:使用vue ui"></a>2.2.1 第一种方式:使用vue ui</h4><p>在本地安装vue/cli时会同时安装了vue，在vue中包含了vue ui。在哪个目录下都可以使用，他管理的是本地服务器。然后导入项目中，即可查看该项目的配置。</p>
 <h4 id="2-2-2-第二种方式-在文件目录中查找"><a href="#2-2-2-第二种方式-在文件目录中查找" class="headerlink" title="2.2.2 第二种方式:在文件目录中查找"></a>2.2.2 第二种方式:在文件目录中查找</h4><p>在node_modules@vue\cli-service\webpack.config.js中</p>
