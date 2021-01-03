@@ -27,7 +27,7 @@
 <a id="more"></a>
 
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#121;&#x73;&#106;&#49;&#x38;&#x30;&#x33;&#x37;&#51;&#49;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;">&#121;&#x73;&#106;&#49;&#x38;&#x30;&#x33;&#x37;&#51;&#49;&#54;&#x34;&#x33;&#51;&#x40;&#49;&#54;&#x33;&#46;&#99;&#111;&#x6d;</a></p>
+<p>git config –global user.email <a href="mailto:&#x79;&#115;&#106;&#49;&#x38;&#x30;&#51;&#x37;&#x33;&#49;&#54;&#x34;&#x33;&#51;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#115;&#106;&#49;&#x38;&#x30;&#51;&#x37;&#x33;&#49;&#54;&#x34;&#x33;&#51;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -153,6 +153,42 @@
       </tags>
   </entry>
   <entry>
+    <title>07_总结</title>
+    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/07-%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>git –version</p>
+</li>
+<li><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a><strong>初始化配置</strong></h3><p>git config –global user.name “damu”<br>git config –global user.email </p>
+<p>git config –list</p>
+<a id="more"></a>
+</li>
+<li><h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>git init</p>
+</li>
+<li><h3 id="C-新增"><a href="#C-新增" class="headerlink" title="C(新增)"></a><strong>C(新增)</strong></h3><p>在工作目录中新增文件<br>git status<br>git add ./<br>git commit -m “msg”  </p>
+</li>
+<li><h3 id="U-修改"><a href="#U-修改" class="headerlink" title="U(修改)"></a><strong>U(修改)</strong></h3><p>在工作目录中修改文件<br>git status<br>git add ./<br>git commit -m “msg”</p>
+</li>
+<li><h3 id="D-删除-amp-重命名"><a href="#D-删除-amp-重命名" class="headerlink" title="D(删除&amp;重命名)"></a><strong>D(删除&amp;重命名)</strong></h3><p>git rm 要删除的文件     git mv 老文件 新文件<br>git  status             git  status<br>git commit -m “msg”     git commit -m “msg”</p>
+</li>
+<li><h3 id="R-查询"><a href="#R-查询" class="headerlink" title="R(查询)"></a><strong>R(查询)</strong></h3><p>git  status   :  查看工作目录中文件的状态(已跟踪(已提交 已暂存 已修改) 未跟踪)<br>git  diff     :  查看未暂存的修改<br>git  diff –cache : 查看未提交的暂存<br>git  log –oneline : 查看提交记录</p>
+</li>
+<li><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a><strong>分支</strong></h3><p>分支的本质其实就是一个提交对象!!!<br>HEAD: </p>
+<pre><code>是一个指针 它默认指向master分支 切换分支时其实就是让HEAD指向不同的分支
+每次有新的提交时 HEAD都会带着当前指向的分支 一起往前移动</code></pre>
+<p>git  log –oneline –decorate –graph –all : 查看整个项目的分支图<br>git branch : 查看分支列表<br>git branch -v: 查看分支指向的最新的提交<br>git branch name : 在当前提交对象上创建新的分支<br>git branch name commithash: 在指定的提交对象上创建新的分支<br>git checkout name :     切换分支<br>git branch -d name : 删除空的分支 删除已经被合并的分支<br>git branch -D name : 强制删除分支</p>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>06_远程仓库</title>
     <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/06-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</url>
     <content><![CDATA[<h3 id="三个必须懂的概念"><a href="#三个必须懂的概念" class="headerlink" title="三个必须懂的概念"></a>三个必须懂的概念</h3><p>本地分支<br>远程跟踪分支(remote/分支名)<br>远程分支</p>
@@ -216,42 +252,6 @@
 <p>​    ssh -T <a href="mailto:git@github.com">git@github.com</a> ：测试公私钥是否已经配对</p>
 <h3 id="使用频率最高的五个命令"><a href="#使用频率最高的五个命令" class="headerlink" title="使用频率最高的五个命令"></a>使用频率最高的五个命令</h3><p>git status<br>git add<br>git commit<br>git push<br>git pull</p>
 <p>经常用到的：<br>git pull origin 远程分支名:master 更新自己的代码到最新版<br>遇到冲突时：<br>git pull –rebase 拉下来master的代码 解决冲突后再<br>git rebase –continue</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>07_总结</title>
-    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/07-%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>git –version</p>
-</li>
-<li><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a><strong>初始化配置</strong></h3><p>git config –global user.name “damu”<br>git config –global user.email </p>
-<p>git config –list</p>
-<a id="more"></a>
-</li>
-<li><h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>git init</p>
-</li>
-<li><h3 id="C-新增"><a href="#C-新增" class="headerlink" title="C(新增)"></a><strong>C(新增)</strong></h3><p>在工作目录中新增文件<br>git status<br>git add ./<br>git commit -m “msg”  </p>
-</li>
-<li><h3 id="U-修改"><a href="#U-修改" class="headerlink" title="U(修改)"></a><strong>U(修改)</strong></h3><p>在工作目录中修改文件<br>git status<br>git add ./<br>git commit -m “msg”</p>
-</li>
-<li><h3 id="D-删除-amp-重命名"><a href="#D-删除-amp-重命名" class="headerlink" title="D(删除&amp;重命名)"></a><strong>D(删除&amp;重命名)</strong></h3><p>git rm 要删除的文件     git mv 老文件 新文件<br>git  status             git  status<br>git commit -m “msg”     git commit -m “msg”</p>
-</li>
-<li><h3 id="R-查询"><a href="#R-查询" class="headerlink" title="R(查询)"></a><strong>R(查询)</strong></h3><p>git  status   :  查看工作目录中文件的状态(已跟踪(已提交 已暂存 已修改) 未跟踪)<br>git  diff     :  查看未暂存的修改<br>git  diff –cache : 查看未提交的暂存<br>git  log –oneline : 查看提交记录</p>
-</li>
-<li><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a><strong>分支</strong></h3><p>分支的本质其实就是一个提交对象!!!<br>HEAD: </p>
-<pre><code>是一个指针 它默认指向master分支 切换分支时其实就是让HEAD指向不同的分支
-每次有新的提交时 HEAD都会带着当前指向的分支 一起往前移动</code></pre>
-<p>git  log –oneline –decorate –graph –all : 查看整个项目的分支图<br>git branch : 查看分支列表<br>git branch -v: 查看分支指向的最新的提交<br>git branch name : 在当前提交对象上创建新的分支<br>git branch name commithash: 在指定的提交对象上创建新的分支<br>git checkout name :     切换分支<br>git branch -d name : 删除空的分支 删除已经被合并的分支<br>git branch -D name : 强制删除分支</p>
-</li>
-</ol>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
 ]]></content>
       <categories>
@@ -469,7 +469,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1.基本使用</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/multidata&#x27;</span>,</span><br><span class="line">  method: <span class="string">&#x27;get&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 配置参数信息</span></span><br><span class="line">axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/data&#x27;</span>,</span><br><span class="line">  method: <span class="string">&#x27;get&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;pop&#x27;</span>,</span><br><span class="line">    page: <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;) </span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.发送并发请求</span></span><br><span class="line">axios.all([axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/multidata&#x27;</span>,</span><br><span class="line">&#125;),axios(&#123;</span><br><span class="line">  url: <span class="string">&#x27;http://152.136.185.210:7878/api/m5/home/data&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;sell&#x27;</span>,</span><br><span class="line">    page: <span class="number">5</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)]).then(axios.spread(<span class="function">(<span class="params">res1,res2</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res1)</span><br><span class="line">    <span class="built_in">console</span>.log(res2)</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 全局配置</span></span><br><span class="line"><span class="comment">// 原因:在开发中很多参数都是固定的,此时就需要抽取这些参数.此时就用到了axios的全局配置</span></span><br><span class="line">axios.defaults.baseURL = <span class="string">&#x27;http://152.136.185.210:7878/api/m5&#x27;</span></span><br><span class="line">axios.defaults.timeout = <span class="number">5000</span></span><br></pre></td></tr></table></figure>
 <p>常见的配置选项：</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/08-axios%E6%A1%86%E6%9E%B6/01.png" alt="image-20201226153248773"></p>
+<p><a href="https://imgchr.com/i/s9MJJO"><img src="https://s3.ax1x.com/2021/01/03/s9MJJO.png" alt="s9MJJO.png"></a></p>
 <h4 id="4-axios实例"><a href="#4-axios实例" class="headerlink" title="4. axios实例"></a>4. axios实例</h4><p>​        前面的代码都是在使用全局的axios和对应的配置在进行网络请求，在现实中是不会这样做的。因为有可能每个功能需要访问的服务端地址不一样，这样就需要创建出不同的axios实例来处理不同的需求等等。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 4.创建axios实例</span></span><br><span class="line"><span class="keyword">const</span> instance1 = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">&#x27;http://152.136.185.210:7878/api/m5&#x27;</span>,</span><br><span class="line">  timeout: <span class="number">5000</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">instance1(&#123;</span><br><span class="line">  url: <span class="string">&#x27;/home/multidata&#x27;</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">instance1(&#123;</span><br><span class="line">  url: <span class="string">&#x27;/home/data&#x27;</span>,</span><br><span class="line">  params: &#123;</span><br><span class="line">    type: <span class="string">&#x27;pop&#x27;</span>,</span><br><span class="line">    page: <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当出现需要访问的服务端地址不同时,此时就在创建一个新的实例即可</span></span><br><span class="line"><span class="keyword">const</span> instance1 = axios.create(&#123;</span><br><span class="line">  baseURL: <span class="string">&#x27;http://222.111.33.33:8000&#x27;</span>,</span><br><span class="line">  timeout: <span class="number">3000</span></span><br><span class="line">&#125;)js</span><br></pre></td></tr></table></figure>
 
@@ -495,7 +495,7 @@
 <p>记住拦截后要使用return config放行,不然后续就被禁止了</p>
 <p>这个config对象内存储的就是发送请求的配置信息</p>
 <p>请求拦截中的config对象</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/08-axios%E6%A1%86%E6%9E%B6/02.png" alt="image-20201226171451773"></p>
+<p><a href="https://imgchr.com/i/s9MGFK"><img src="https://s3.ax1x.com/2021/01/03/s9MGFK.png" alt="s9MGFK.png"></a></p>
 <h5 id="响应成功与失败的拦截"><a href="#响应成功与失败的拦截" class="headerlink" title="响应成功与失败的拦截"></a>响应成功与失败的拦截</h5><p>这个res就是服务器返回的具体数据信息</p>
 <p>记住拦截后要使用return放行,不然后续就被禁止了（比如后续的then操作）</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
@@ -828,7 +828,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/01.png" alt="image-20201221145631793"></p>
+<p><a href="https://imgchr.com/i/s9ikad"><img src="https://s3.ax1x.com/2021/01/03/s9ikad.png" alt="s9ikad.png"></a></p>
 <h3 id="1-2-前端路由的发展"><a href="#1-2-前端路由的发展" class="headerlink" title="1.2 前端路由的发展"></a>1.2 前端路由的发展</h3><h4 id="1-2-1-后端路由-后端渲染"><a href="#1-2-1-后端路由-后端渲染" class="headerlink" title="1.2.1 后端路由(后端渲染)"></a><font color="red">1.2.1 后端路由(后端渲染)</font></h4><h5 id="后端路由简介"><a href="#后端路由简介" class="headerlink" title="后端路由简介"></a>后端路由简介</h5><p>​        早期在开发网页时是通过jsp(Java Server Pages)/php开发的。（没有AJAX）<br>​        通常是浏览器将url发送到服务器，浏览器拿到以后进行解析，然后将其解析出对应的页面，在后端就用jsp将页面写好(html+css+java(java用来获取数据并将其动态渲染在页面))。然后将该页面发送到浏览器（仅发送html+css）。<font color="blue">这种方式就是后端渲染（服务端渲染）。</font>当用户点击跳转页面时，又会重复上述操作，再次将后端写好的页面发送到浏览器端。<font color="deeppink"><strong>总结：服务器直接生产渲染好对应的HTML页面, 返回给客户端进行展示。</strong></font></p>
 <ul>
 <li><p>一个页面有自己对应的网址, 也就是URL.</p>
@@ -850,11 +850,11 @@
 <li><p>而且通常情况下HTML代码和数据以及对应的逻辑会混在一起, 编写和维护都是非常糟糕的事情.（耦合性太高）</p>
 </li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/02.png" alt="image-20201221152146909"></p>
+<p><a href="https://imgchr.com/i/s9iPqe"><img src="https://s3.ax1x.com/2021/01/03/s9iPqe.png" alt="s9iPqe.png"></a></p>
 <h4 id="1-2-2-前后端分离（前端渲染）"><a href="#1-2-2-前后端分离（前端渲染）" class="headerlink" title="1.2.2 前后端分离（前端渲染）"></a><font color="red">1.2.2 前后端分离（前端渲染）</font></h4><h5 id="前后端分离简介"><a href="#前后端分离简介" class="headerlink" title="前后端分离简介"></a>前后端分离简介</h5><p>​        由于AJAX的出现，后端只负责提供数据，不负责任何阶段的内容。</p>
 <p>​        通常是浏览器将url发送到静态资源服务器（内部存储各个不同页面对应的一套html+css+js），浏览器从静态服务器拿到html+css+js，浏览器直接渲染html和css，并且js代码在浏览器中执行。在js中的<font color="blue">AJAX请求即API接口</font>，然后从提供接口的服务器中获得数据，然后按照其他的js代码将其插入到DOM树中。</p>
 <p><font color="red">前端渲染</font>：浏览器中显示网页中大部分内容，都是由前端写的js代码在浏览器中执行，最终渲染出来的网页。</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/03.png" alt="02-前端后端分离阶段"></p>
+<p><a href="https://imgchr.com/i/s9iFVH"><img src="https://s3.ax1x.com/2021/01/03/s9iFVH.png" alt="s9iFVH.png"></a></p>
 <h5 id="前后端分离优点"><a href="#前后端分离优点" class="headerlink" title="前后端分离优点"></a><font color="red">前后端分离优点</font></h5><ul>
 <li><p>前后端责任的清晰, 后端专注于数据上, 前端专注于交互和可视化上.</p>
 </li>
@@ -865,7 +865,7 @@
 <p><font color="blue"><strong>整个网站只有一个html页面</strong></font></p>
 <p>​        浏览器将url发送到静态资源服务器（之前内部存储的是不同页面有对应的一套html+css+js<strong>现在只有一个html一个css和一个js</strong>），浏览器从静态服务器拿到<strong>全部的html+css+js资源</strong>，当用户点击时，url发生改变，但是页面不会跳转而是会向<strong>前端路由</strong>中查找url对应的组件将页面进行更改渲染。</p>
 <p>此时前端路由就是该功能的支撑：<font color="red">前端路由会映射url与其对应组件的关系。</font></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/04.png" alt="image-20201221160500540"></p>
+<p><a href="https://imgchr.com/i/s9iVPI"><img src="https://s3.ax1x.com/2021/01/03/s9iVPI.png" alt="s9iVPI.png"></a></p>
 <p><font color="deeppink"><strong>改变url不会刷新页面向服务器发送请求的几种方式：</strong></font></p>
 <ul>
 <li>改变location.hash</li>
@@ -943,33 +943,33 @@
 </li>
 </ul>
 <h3 id="2-4-vue-router嵌套路由"><a href="#2-4-vue-router嵌套路由" class="headerlink" title="2.4. vue-router嵌套路由"></a>2.4. vue-router嵌套路由</h3><p>第一步：创建子组件，子组件正常编写。</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/05.png" alt="image-20201222152126067"></p>
+<p><a href="https://imgchr.com/i/s9iAIA"><img src="https://s3.ax1x.com/2021/01/03/s9iAIA.png" alt="s9iAIA.png"></a></p>
 <p>第二步：在父组件中使用router-link标签将子组件挂载，并使用router-view标签处理显示位置。</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/06.png" alt="image-20201222152410373"></p>
+<p><a href="https://imgchr.com/i/s9VHr6"><img src="https://s3.ax1x.com/2021/01/03/s9VHr6.png" alt="s9VHr6.png"></a></p>
 <p>第三步：在路由配置文件中使用children属性配置子路由。<br>        <font color="red">在这里注意写路径时前面不要加斜杠。</font></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/07.png" alt="image-20201222152626437"></p>
+<p><a href="https://imgchr.com/i/s9VbqK"><img src="https://s3.ax1x.com/2021/01/03/s9VbqK.png" alt="s9VbqK.png"></a></p>
 <p>第四步：设置嵌套路由的默认选项。</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/08.png" alt="image-20201222152734673"></p>
+<p><a href="https://imgchr.com/i/s9VLVO"><img src="https://s3.ax1x.com/2021/01/03/s9VLVO.png" alt="s9VLVO.png"></a></p>
 <h3 id="2-5-vue-router参数传递"><a href="#2-5-vue-router参数传递" class="headerlink" title="2.5. vue-router参数传递"></a>2.5. vue-router参数传递</h3><h4 id="2-5-1-传递参数主要有两种方式"><a href="#2-5-1-传递参数主要有两种方式" class="headerlink" title="2.5.1 传递参数主要有两种方式"></a>2.5.1 传递参数主要有两种方式</h4><p>params(parameter参数)和query</p>
 <ul>
 <li>**params的类型:**（适用于数据少的时候）<br>配置路由格式: /router/:id<br>传递的方式: 在path后面跟上对应的值<br>传递后形成的路径: /router/123, /router/abc</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/09.png" alt="image-20201222152734673"></p>
+<p><a href="https://imgchr.com/i/s9V7Kx"><img src="https://s3.ax1x.com/2021/01/03/s9V7Kx.png" alt="s9V7Kx.png"></a></p>
 <ul>
 <li>**query的类型:**（适用于数据多的时候）<br>配置路由格式: /router, 也就是普通配置<br>传递的方式: 对象中使用query的key作为传递方式<br>传递后形成的路径: /router?id=123, /router?id=abc</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/10.png" alt="image-20201222152734673"></p>
+<p><a href="https://imgchr.com/i/s9Vox1"><img src="https://s3.ax1x.com/2021/01/03/s9Vox1.png" alt="s9Vox1.png"></a></p>
 <p><font color="red">params与query的区别:</font><br>query要使用path来引入，params要使用name来引入，接受参数类似，分别是this.$route.query.name和this.$route.params.name</p>
 <p><font color="red"><strong>URL的组成：协议(scheme)+服务器地址(host)+端口(默认是80不写)+路径(path)+?查询(query)+#片段hash值(fragment)</strong></font></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/11.png" alt="image-20201222161843722"></p>
+<p><a href="https://imgchr.com/i/s9ZBdO"><img src="https://s3.ax1x.com/2021/01/03/s9ZBdO.png" alt="s9ZBdO.png"></a></p>
 <h5 id="传递参数的两种方式"><a href="#传递参数的两种方式" class="headerlink" title="传递参数的两种方式"></a><font color="cornflowerblue">传递参数的两种方式</font></h5><ul>
 <li>方式一:  使用&lt;router-link&gt;</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/12.png" alt="image-20201222160749595"></p>
+<p><a href="https://imgchr.com/i/s9Z6Wd"><img src="https://s3.ax1x.com/2021/01/03/s9Z6Wd.png" alt="s9Z6Wd.png"></a></p>
 <ul>
 <li>方式二:  <strong>使用JavaScript代码</strong>(不使用router-link使用button并监听点击)<br>注意这里也会出现连续点击报错问题，添加一层判断即可</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/13.png" alt="image-20201222160802661"></p>
+<p><a href="https://imgchr.com/i/s9ZsFe"><img src="https://s3.ax1x.com/2021/01/03/s9ZsFe.png" alt="s9ZsFe.png"></a></p>
 <h5 id="获取参数方式"><a href="#获取参数方式" class="headerlink" title="获取参数方式:"></a><font color="cornflowerblue">获取参数方式:</font></h5><ul>
 <li>获取参数通过$route对象获取的.<ul>
 <li>在使用了 vue-router 的应用中，路由对象会被注入每个组件中，赋值为 this.$route ，并且当路由切换时，路由对象会被更新</li>
@@ -977,14 +977,14 @@
 </li>
 <li>通过$route获取传递的信息如下:</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/14.png" alt="image-20201222161103731"></p>
+<p><a href="https://imgchr.com/i/s9ZDoD"><img src="https://s3.ax1x.com/2021/01/03/s9ZDoD.png" alt="s9ZDoD.png"></a></p>
 <h4 id="2-5-2-route和-router的区别"><a href="#2-5-2-route和-router的区别" class="headerlink" title="2.5.2 $route和$router的区别"></a>2.5.2 $route和$router的区别</h4><ul>
 <li><p>$router就是VueRouter实例。想要导航到不同URL，则使用$router.push方法</p>
 </li>
 <li><p>$route为配置的路由中，当前处于活跃的路由（router跳转的路由对象）。里面可以获取name、path、query、params等 </p>
 </li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/15.png" alt="image-20201222161300618"></p>
+<p><a href="https://imgchr.com/i/s9ZyJH"><img src="https://s3.ax1x.com/2021/01/03/s9ZyJH.png" alt="s9ZyJH.png"></a></p>
 <p><font color="red">$route和$router都是通过添加到vue的原型中的，所以所有vue的实例都可以访问到$route和$router。</font></p>
 <h3 id="2-6-vue-router导航守卫"><a href="#2-6-vue-router导航守卫" class="headerlink" title="2.6. vue-router导航守卫"></a>2.6. vue-router导航守卫</h3><p><font color="deeppink"><strong>导航守卫用于在路由中来回跳转时调用的回调函数。</strong></font></p>
 <h4 id="2-6-1-首先了解几个生命周期函数"><a href="#2-6-1-首先了解几个生命周期函数" class="headerlink" title="2.6.1 首先了解几个生命周期函数"></a><font color="red"><strong>2.6.1 首先了解几个生命周期函数</strong></font></h4><p>created回调函数：在组件被创建后会被调用<br>mounted回调函数：当组件中的模板被挂载到DOM中时被调用<br>updated回调函数：当界面发生更新时被调用<br>destroyed回调函数：当组件被销毁时被调用</p>
@@ -993,10 +993,10 @@
 <p>问题：实现时要更改多个页面中的代码</p>
 <p>实现方案二：</p>
 <p>使用vue-router全局导航守卫<br>        router.beforeEach方法（被称为前置守卫即钩子<font color="red">在跳转前回调</font>），参数为一个函数，该函数中有三个参数，分别是to(route类型)、from(route类型)和next(函数类型)。使用该方法时内部必须调用next函数。不调用会导致点击后再也无法跳转。可以在路由中添加一个meta属性**<font color="cornflowerblue">meta表示元数据（描述数据的数据）</font>**，将数据保存在该对象中。</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/16.png" alt="image-20201222211729332"></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/17.png" alt="image-20201222210743670"></p>
+<p><a href="https://imgchr.com/i/s9nPqx"><img src="https://s3.ax1x.com/2021/01/03/s9nPqx.png" alt="s9nPqx.png"></a></p>
+<p><a href="https://imgchr.com/i/s9nCs1"><img src="https://s3.ax1x.com/2021/01/03/s9nCs1.png" alt="s9nCs1.png"></a></p>
 <p><strong><font color="red">注意：to是一个对象，其中有一个matched数组，包含当前路由的所有嵌套路径片段的路由记录</font></strong></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/18.png" alt="image-20201222212006184"></p>
+<p><a href="https://imgchr.com/i/s9n0e0"><img src="https://s3.ax1x.com/2021/01/03/s9n0e0.png" alt="s9n0e0.png"></a></p>
 <h4 id="2-6-3-导航守卫的补充"><a href="#2-6-3-导航守卫的补充" class="headerlink" title="2.6.3 导航守卫的补充"></a>2.6.3 导航守卫的补充</h4><ul>
 <li>router.afterFach    <font color="red">在跳转后回调</font><br>需要传入一个函数，该函数有两个参数：to和from。因为他是在跳转后回调所以就没有next参数。</li>
 </ul>
@@ -1004,22 +1004,22 @@
 <ul>
 <li><font color="deeppink"><strong>全局守卫</strong></font></li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/19.png" alt="image-20201222213411835"></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/20.png" alt="image-20201222213423458"></p>
+<p><a href="https://imgchr.com/i/s9n9MR"><img src="https://s3.ax1x.com/2021/01/03/s9n9MR.png" alt="s9n9MR.png"></a></p>
+<p><a href="https://imgchr.com/i/s9nSz9"><img src="https://s3.ax1x.com/2021/01/03/s9nSz9.png" alt="s9nSz9.png"></a></p>
 <ul>
 <li><font color="deeppink"><strong>组件内守卫</strong></font></li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/21.png" alt="image-20201222213546116"></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/22.png" alt="image-20201222213610166"></p>
+<p><a href="https://imgchr.com/i/s9nyYF"><img src="https://s3.ax1x.com/2021/01/03/s9nyYF.png" alt="s9nyYF.png"></a></p>
+<p><a href="https://imgchr.com/i/s9n6W4"><img src="https://s3.ax1x.com/2021/01/03/s9n6W4.png" alt="s9n6W4.png"></a></p>
 <ul>
 <li><font color="deeppink"><strong>路由独享守卫</strong></font></li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/23.png" alt="image-20201222213641498"></p>
+<p><a href="https://imgchr.com/i/s9ngSJ"><img src="https://s3.ax1x.com/2021/01/03/s9ngSJ.png" alt="s9ngSJ.png"></a></p>
 <p><a href="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html">路由守卫官方文档</a></p>
 <p><a href="https://www.cnblogs.com/johnjackson/p/11044658.html">钩子与回调的区别</a></p>
 <p>钩子函数在捕获消息的第一时间就执行，而回调函数是捕获结束时，最后一个被执行的。</p>
 <h3 id="2-7-keep-alive"><a href="#2-7-keep-alive" class="headerlink" title="2.7. keep-alive"></a>2.7. keep-alive</h3><h4 id="2-7-1-首先理解Vue生命周期"><a href="#2-7-1-首先理解Vue生命周期" class="headerlink" title="2.7.1 首先理解Vue生命周期"></a><font color="red">2.7.1 首先理解Vue生命周期</font></h4><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/06-Vue-router%E8%B7%AF%E7%94%B1%E6%8F%92%E4%BB%B6/24.png" alt="lifecycle"></p>
+<p><a href="https://imgchr.com/i/s9n2l9"><img src="https://s3.ax1x.com/2021/01/03/s9n2l9.png" alt="s9n2l9.png"></a></p>
 <h4 id="2-7-2-案例需求："><a href="#2-7-2-案例需求：" class="headerlink" title="2.7.2 案例需求："></a>2.7.2 案例需求：</h4><p>当在主页中点击消息列表，当切换到其他路由后，再回到主页路由后将其保留之前显示的消息列表。</p>
 <ul>
 <li>原因：当切换路由会之前的组件会被销毁，所以在回到之前的路由时会重新创建一个新的组件。</li>
@@ -1097,7 +1097,7 @@
 </ul>
 </li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/07-Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6/01.png" alt="image-20201225083444566"></p>
+<p><a href="https://imgchr.com/i/s9MAoV"><img src="https://s3.ax1x.com/2021/01/03/s9MAoV.png" alt="s9MAoV.png"></a></p>
 <h4 id="1-4-全局单例模式（大管家）"><a href="#1-4-全局单例模式（大管家）" class="headerlink" title="1.4 全局单例模式（大管家）"></a>1.4 全局<font color="red">单例模式</font>（大管家）</h4><ul>
 <li><p>我们现在要做的就是将共享的状态抽取出来，交给我们的大管家，统一进行管理。</p>
 </li>
@@ -1124,7 +1124,7 @@
 <p>原因：</p>
 <p>​        流程步骤：首先State提供状态给组件，当需要修改State时，组件先发布一个Action，然后提交到Mutations。最后再将State进行修改。<br>​        由于只有通过Mutations修改的State，此时Devtools才会记录到修改State的信息，比如谁进行了修改、修改内容是什么。此时才会让后续出错时容易查找问题出在哪儿。因此不提倡绕过Mutations直接修改<font color="deeppink">$store.state.状态名</font>的方法进行修改状态。（此外绕过Actions直接进入Mutations修改也是可以的。但是Actions可以处理异步操作。）</p>
 <p>​    使用$store.commit(‘方法名’)来修改state</p>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/07-Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6/02.png" alt="图片2"></p>
+<p><a href="https://imgchr.com/i/s9KXIf"><img src="https://s3.ax1x.com/2021/01/03/s9KXIf.png" alt="s9KXIf.png"></a></p>
 <h4 id="2-3-Vuex的核心概念"><a href="#2-3-Vuex的核心概念" class="headerlink" title="2.3 Vuex的核心概念"></a>2.3 Vuex的核心概念</h4><p>vuex的核心概念包括：</p>
 <ul>
 <li><p>State单一状态树(用于存储状态)</p>
@@ -1213,14 +1213,14 @@
 <li>使用模块中的getters<br>和之前一样使用，但是要想访问根状态时就可在第三个参数传入rootState，这个参数就是根状态的state对象。</li>
 <li>使用模块中的actions<br>此时这里面参数中的<font color="red">context</font>表示自己所处的模块，不在代表根状态整体store。并且内部还存储了一些根状态的信息。<font color="red"><strong>具体如下</strong></font>：</li>
 </ol>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/07-Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6/03.png" alt="image-20201225212408993"></p>
+<p><a href="https://imgchr.com/i/s9KOdP"><img src="https://s3.ax1x.com/2021/01/03/s9KOdP.png" alt="s9KOdP.png"></a></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 示例</span></span><br><span class="line">modules: &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    state: &#123;&#125;,</span><br><span class="line">    mutations: &#123;&#125;,</span><br><span class="line">    actions: &#123;&#125;,</span><br><span class="line">    getters: &#123;&#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  b: &#123;</span><br><span class="line">    state: &#123;&#125;,</span><br><span class="line">    mutations: &#123;&#125;,</span><br><span class="line">    actions: &#123;&#125;,</span><br><span class="line">    getters: &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 细节</span></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line">&lt;h2&gt;&#123;&#123;$store.state.a.name&#125;&#125;&lt;/h2&gt;</span><br><span class="line">&lt;button @click=<span class="string">&quot;updatedName&quot;</span>&gt;修改&lt;/button&gt;</span><br><span class="line">&lt;h2&gt;&#123;&#123;$store.getters.fullname&#125;&#125;&lt;/h2&gt;</span><br><span class="line">&lt;h2&gt;&#123;&#123;$store.getters.fullname2&#125;&#125;&lt;/h2&gt;</span><br><span class="line">&lt;h2&gt;&#123;&#123;$store.getters.fullname3&#125;&#125;&lt;/h2&gt;</span><br><span class="line">&lt;button @click=<span class="string">&quot;asyncupdatedName&quot;</span>&gt;异步修改&lt;/button&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">updatedName</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.$store.commit(<span class="string">&#x27;updatedName&#x27;</span>,<span class="string">&quot;lisi&quot;</span>)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="function"><span class="title">asyncupdatedName</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.$store.dispatch(<span class="string">&#x27;aUpdateName&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义</span></span><br><span class="line"><span class="keyword">const</span> moduleA = &#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    name: <span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    <span class="function"><span class="title">updatedName</span>(<span class="params">state,payload</span>)</span> &#123;</span><br><span class="line">      state.name = payload</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  getters: &#123;</span><br><span class="line">    <span class="function"><span class="title">fullname</span>(<span class="params">state</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> state.name + <span class="string">&#x27;11111&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">fullname2</span>(<span class="params">state, getters</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> getters.fullname + <span class="string">&#x27;2222&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">fullname3</span>(<span class="params">state, getters, rootState</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> getters.fullname2 + rootState.counter</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    <span class="function"><span class="title">aUpdateName</span>(<span class="params">context</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(context)</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        context.commit(<span class="string">&#x27;updatedName&#x27;</span>,<span class="string">&#x27;wangwu&#x27;</span>)</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">modules: &#123;</span><br><span class="line">  a: moduleA</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 <ul>
 <li>项目结构组织</li>
 </ul>
-<p><img src="/Vue/%E7%AC%94%E8%AE%B0/vue/07-Vuex%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%8F%92%E4%BB%B6/04.png" alt="image-20201225205140122"></p>
+<p><a href="https://imgchr.com/i/s9Mkd0"><img src="https://s3.ax1x.com/2021/01/03/s9Mkd0.png" alt="s9Mkd0.png"></a></p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 ]]></content>
       <categories>
