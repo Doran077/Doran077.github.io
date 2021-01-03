@@ -1197,7 +1197,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #17feff;
+  background: #0aa33e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2767,7 +2767,7 @@ body {
   background: rgba(255,255,255,0.9);
 }
 .site-brand-container {
-  background-image: url("/images/bac3.jpg");
+  background-image: url("https://s3.ax1x.com/2021/01/03/spzZ8O.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
