@@ -3707,4 +3707,20 @@
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>attribute与property</title>
+    <url>/HTML/%E7%AC%94%E8%AE%B0/HTML+CSS/attribute%E4%B8%8Eproperty/</url>
+    <content><![CDATA[<h3 id="1-什么是attribute，什么是property"><a href="#1-什么是attribute，什么是property" class="headerlink" title="1.什么是attribute，什么是property"></a>1.什么是attribute，什么是property</h3><p>​    html标签的预定义和自定义属性我们统称为attribute(attribute被节点的attributes属性统一管理且该属性是一个对象)<br>​    js原生对象的直接属性，我们统称为property(attributes就是一个节点的property)</p>
+<h3 id="2-什么是布尔值属性，什么是非布尔值属性"><a href="#2-什么是布尔值属性，什么是非布尔值属性" class="headerlink" title="2.什么是布尔值属性，什么是非布尔值属性"></a>2.什么是布尔值属性，什么是非布尔值属性</h3><p>​    property的属性值为布尔类型的  我们统称为布尔值属性<br>​    property的属性值为非布尔类型的  我们统称为非布尔值属性</p>
+<h3 id="3-attribute和property的同步关系"><a href="#3-attribute和property的同步关系" class="headerlink" title="3.attribute和property的同步关系"></a>3.attribute和property的同步关系</h3><p>​    非布尔值属性：实时同步<br>​    布尔值属性：<br>​        property永远都不会同步attribute<br>​        在没有动过property的情况下<br>​            attribute会同步property<br>​        在动过property的情况下<br>​            attribute不会同步property</p>
+<h3 id="4-用户操作的是property"><a href="#4-用户操作的是property" class="headerlink" title="4.用户操作的是property"></a>4.用户操作的是property</h3><h3 id="5-浏览器认的是property"><a href="#5-浏览器认的是property" class="headerlink" title="5.浏览器认的是property"></a>5.浏览器认的是property</h3><p><a href="https://www.bilibili.com/video/BV1YW411T7Lj?p=1">参考尚硅谷</a></p>
+]]></content>
+      <categories>
+        <category>HTML</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
 </search>
