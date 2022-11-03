@@ -207,7 +207,7 @@
 <a id="more"></a>
 
 <h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>git config –global user.name ysj</p>
-<p>git config –global user.email <a href="mailto:&#x79;&#115;&#106;&#49;&#x38;&#x30;&#x33;&#55;&#51;&#x31;&#x36;&#52;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;">&#x79;&#115;&#106;&#49;&#x38;&#x30;&#x33;&#55;&#51;&#x31;&#x36;&#52;&#51;&#51;&#x40;&#x31;&#x36;&#x33;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p>git config –global user.email <a href="mailto:&#x79;&#115;&#106;&#49;&#x38;&#48;&#x33;&#55;&#51;&#x31;&#x36;&#x34;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#99;&#111;&#109;">&#x79;&#115;&#106;&#49;&#x38;&#48;&#x33;&#55;&#51;&#x31;&#x36;&#x34;&#51;&#51;&#x40;&#49;&#x36;&#51;&#46;&#99;&#111;&#109;</a></p>
 <p>git config –list</p>
 <h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>​        Git 的核心部分是一个简单的键值对数据库。你可以向该数据库插入任意类型的内容，它会返回一个键值，通过该键值可以在任意时刻再次检索该内容</p>
 <p>​        Git 存储内容的方式：一个文件对应一条内容。校验和的前两个字符用于命名子目录，余下的38个字符则用作文件名。</p>
@@ -277,6 +277,52 @@
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
 <p>​    </p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>05_代码风格</title>
+    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/</url>
+    <content><![CDATA[<h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><h2 id="Eslint-js代码检查工具"><a href="#Eslint-js代码检查工具" class="headerlink" title="Eslint(js代码检查工具)"></a>Eslint(js代码检查工具)</h2><h3 id="仅使用eslint"><a href="#仅使用eslint" class="headerlink" title="仅使用eslint"></a>仅使用eslint</h3><p><strong>创建package.json文件(npm init -y)</strong></p>
+<p><strong>首先本地安装eslint</strong></p>
+<p><font color="cornflowerblue"><strong>npm i eslint –save-dev</strong></font></p>
+<a id="more"></a>
+
+
+
+<p><strong>设置package.json文件</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;lint&quot;</span>: <span class="string">&quot;eslint src&quot;</span>,</span><br><span class="line">  <span class="string">&quot;lint:create&quot;</span>: <span class="string">&quot;eslint --init&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>在终端中输入npm run lint:create(等价于执行npm eslint –init)</strong></p>
+<p>出现的问题:</p>
+<p>1.你想要怎么使用eslint (只是检查语法，检查语法找到问题，检查语法找到问题并强制保存编码风格)    3</p>
+<p>2.哪一种模块化方案你要去使用    3</p>
+<p>3.哪一种框架    3</p>
+<p>4.你用不用typescript    n</p>
+<p>5.你的项目跑在那儿(浏览器，node)    1</p>
+<p>6.你想要怎么去定义一个风格(使用流行的向导，回答问题去自定义，导入配置文件)    1</p>
+<p>7.哪一个向导你想要使用(Airbnb，标准，谷歌)    2</p>
+<p>8.哪种配置文件你想要(js，yaml，json)    1</p>
+<p>9.你希望让npm帮你装依赖的包吗    y</p>
+<p><strong>完成后会生成 .eslintrc.js 文件。提供编码规则</strong></p>
+<p><strong>装完之后以后在该项目的终端中输入npm run lint命令就会去验证跟根目录下的src文件夹下的js代码</strong></p>
+<p>此时存在的问题是你可以不去通过eslint的约束而直接提交到git上</p>
+<h3 id="eslint配合husky-哈士奇-和Git使用"><a href="#eslint配合husky-哈士奇-和Git使用" class="headerlink" title="eslint配合husky(哈士奇)和Git使用"></a>eslint配合husky(哈士奇)和Git使用</h3><p><strong>在装husky之前一定要先创建Git仓库，因为他要像git中添加钩子</strong></p>
+<p><strong>安装husky</strong></p>
+<p><font color="blue">npm i husky –save-dev</font></p>
+<p><strong>设置package.json文件</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;husky&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hooks&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;pre-commit&quot;</span>: <span class="string">&quot;npm run lint&quot;</span></span><br><span class="line">      <span class="comment">//在git commit之前一定要通过npm run lint的检查</span></span><br><span class="line">      <span class="comment">// 只有npm run lint不报错时 commit才能真正的运行</span></span><br><span class="line">    &#125;</span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置之后再向git提交就会自动调用eslint验证js代码</p>
+<h2 id="Editor-Config"><a href="#Editor-Config" class="headerlink" title="Editor Config"></a>Editor Config</h2><p>​        EditorConfig 帮助开发人员定义和维护不同编辑器之间一致的编码风格。EditorConfig 项目由定义编码样式的文件格式和一组文本编辑器插件组成，这些插件使编辑器能够读取文件格式并坚持已定义的样式。编辑器配置文件易于阅读，并且可以很好地与版本控制系统一起工作</p>
+<p>​        你只需配置一个 .editorconfig 文件，在其中设置好要遵守的代码规范，放在项目的根目录下，就能够在几乎所有的主流 IDE 和编辑器中复用了，可以将 .editorconfig 文件也提交到版本控制系统中，就不需要针对不同 IDE 和编辑器再单独进行设置了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
 ]]></content>
       <categories>
         <category>版本控制</category>
@@ -577,52 +623,6 @@
 <li><h3 id="多数操作仅添加数据"><a href="#多数操作仅添加数据" class="headerlink" title="多数操作仅添加数据"></a>多数操作仅添加数据</h3></li>
 <li><h3 id="文件的三种状态"><a href="#文件的三种状态" class="headerlink" title="文件的三种状态"></a>文件的三种状态</h3></li>
 </ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>05_代码风格</title>
-    <url>/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/Git/git/05-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC/</url>
-    <content><![CDATA[<h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><h2 id="Eslint-js代码检查工具"><a href="#Eslint-js代码检查工具" class="headerlink" title="Eslint(js代码检查工具)"></a>Eslint(js代码检查工具)</h2><h3 id="仅使用eslint"><a href="#仅使用eslint" class="headerlink" title="仅使用eslint"></a>仅使用eslint</h3><p><strong>创建package.json文件(npm init -y)</strong></p>
-<p><strong>首先本地安装eslint</strong></p>
-<p><font color="cornflowerblue"><strong>npm i eslint –save-dev</strong></font></p>
-<a id="more"></a>
-
-
-
-<p><strong>设置package.json文件</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">  <span class="string">&quot;lint&quot;</span>: <span class="string">&quot;eslint src&quot;</span>,</span><br><span class="line">  <span class="string">&quot;lint:create&quot;</span>: <span class="string">&quot;eslint --init&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p><strong>在终端中输入npm run lint:create(等价于执行npm eslint –init)</strong></p>
-<p>出现的问题:</p>
-<p>1.你想要怎么使用eslint (只是检查语法，检查语法找到问题，检查语法找到问题并强制保存编码风格)    3</p>
-<p>2.哪一种模块化方案你要去使用    3</p>
-<p>3.哪一种框架    3</p>
-<p>4.你用不用typescript    n</p>
-<p>5.你的项目跑在那儿(浏览器，node)    1</p>
-<p>6.你想要怎么去定义一个风格(使用流行的向导，回答问题去自定义，导入配置文件)    1</p>
-<p>7.哪一个向导你想要使用(Airbnb，标准，谷歌)    2</p>
-<p>8.哪种配置文件你想要(js，yaml，json)    1</p>
-<p>9.你希望让npm帮你装依赖的包吗    y</p>
-<p><strong>完成后会生成 .eslintrc.js 文件。提供编码规则</strong></p>
-<p><strong>装完之后以后在该项目的终端中输入npm run lint命令就会去验证跟根目录下的src文件夹下的js代码</strong></p>
-<p>此时存在的问题是你可以不去通过eslint的约束而直接提交到git上</p>
-<h3 id="eslint配合husky-哈士奇-和Git使用"><a href="#eslint配合husky-哈士奇-和Git使用" class="headerlink" title="eslint配合husky(哈士奇)和Git使用"></a>eslint配合husky(哈士奇)和Git使用</h3><p><strong>在装husky之前一定要先创建Git仓库，因为他要像git中添加钩子</strong></p>
-<p><strong>安装husky</strong></p>
-<p><font color="blue">npm i husky –save-dev</font></p>
-<p><strong>设置package.json文件</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;husky&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hooks&quot;</span>: &#123;</span><br><span class="line">      <span class="string">&quot;pre-commit&quot;</span>: <span class="string">&quot;npm run lint&quot;</span></span><br><span class="line">      <span class="comment">//在git commit之前一定要通过npm run lint的检查</span></span><br><span class="line">      <span class="comment">// 只有npm run lint不报错时 commit才能真正的运行</span></span><br><span class="line">    &#125;</span><br><span class="line">	&#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>配置之后再向git提交就会自动调用eslint验证js代码</p>
-<h2 id="Editor-Config"><a href="#Editor-Config" class="headerlink" title="Editor Config"></a>Editor Config</h2><p>​        EditorConfig 帮助开发人员定义和维护不同编辑器之间一致的编码风格。EditorConfig 项目由定义编码样式的文件格式和一组文本编辑器插件组成，这些插件使编辑器能够读取文件格式并坚持已定义的样式。编辑器配置文件易于阅读，并且可以很好地与版本控制系统一起工作</p>
-<p>​        你只需配置一个 .editorconfig 文件，在其中设置好要遵守的代码规范，放在项目的根目录下，就能够在几乎所有的主流 IDE 和编辑器中复用了，可以将 .editorconfig 文件也提交到版本控制系统中，就不需要针对不同 IDE 和编辑器再单独进行设置了。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15J411973T">尚硅谷Git教程全套完整版（12h深入掌握git）</a></p>
 ]]></content>
       <categories>
@@ -944,54 +944,6 @@
       </tags>
   </entry>
   <entry>
-    <title>js数据类型3</title>
-    <url>/js/%E7%AC%94%E8%AE%B0/js/1.3.JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h2 id="相等比较"><a href="#相等比较" class="headerlink" title="相等比较"></a>相等比较</h2><h3 id><a href="#" class="headerlink" title="=="></a>==</h3><p>在比较的时候会强制转换左右两边的数据类型</p>
-<ul>
-<li>对象 == 对象：比较地址</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> b = &#123;&#125;</span><br><span class="line">a == b <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>对象 == 字符串：对象转换为字符串</li>
-</ul>
-<a id="more"></a>
-
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;&#125;</span><br><span class="line">a == <span class="string">&#x27;[object Object]&#x27;</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>NaN == NaN：NaN 和自己以及其他值比较都不相等</p>
-</li>
-<li><p>null == undefined：在两个等于号下相等，三个等于号下不相等，并且和自己比较相等，和其他值比较都不相等</p>
-</li>
-<li><p>剩下的情况，只要两边类型不同，都转换为数字（遇到 <code>!</code> 会先转换为 boolean 再转换为数字）</p>
-<ul>
-<li>只有这 5 个可以转换为 boolean 的 false：<code>null</code>、<code>undefined</code>、<code>NaN</code>、<code>&#39;&#39;</code>（空字符串）、<code>0</code></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="literal">null</span> <span class="comment">// true</span></span><br><span class="line">!<span class="literal">undefined</span> <span class="comment">// true</span></span><br><span class="line">!<span class="literal">NaN</span> <span class="comment">// true</span></span><br><span class="line">!<span class="string">&#x27;&#x27;</span> <span class="comment">// true</span></span><br><span class="line">!<span class="number">0</span> <span class="comment">// true</span></span><br><span class="line">![] <span class="comment">// false 引用类型转boolean都为true</span></span><br><span class="line">!<span class="string">&#x27; &#x27;</span> <span class="comment">// false //字符串转boolean，除了空串都为true</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>遇到 [] 时，先 .toString() 转为字符串，字符串再变成数字</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[] &#x3D;&#x3D; false &#x2F;&#x2F; true，都转为数字再进行比较：先把[].toString()转为字符串，空字符串再变成数字0（Number(&#39;&#39;) &#x3D;&#x3D;&gt; 0），false转换为数字是0</span><br><span class="line">[0] &#x3D;&#x3D; false &#x2F;&#x2F; true，Number([0].toString()) --&gt; 0</span><br><span class="line">[1] &#x3D;&#x3D; true &#x2F;&#x2F; true，Number([1].toString()) --&gt; 1</span><br><span class="line">[2] &#x3D;&#x3D; true &#x2F;&#x2F; false，Number([2].toString()) --&gt; 2</span><br><span class="line">[] &#x3D;&#x3D; ![] &#x2F;&#x2F; true</span><br><span class="line">&#39; &#39; &#x3D;&#x3D; !&#39; &#39; &#x2F;&#x2F; true，Number(&#39; &#39;) &#x3D;&#x3D;&gt; 0</span><br><span class="line">+0 &#x3D;&#x3D; -0 &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
-<p>  数组的 toString 转化为字符串，而对象的 toString 相当于 <code>Object.prototype.toString.call()</code> 结果是 <code>&quot;[object Object]&quot;</code></p>
-<p><img src="https://img-blog.csdnimg.cn/20201027111751868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTA4ODMy,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
-<h3 id="-1"><a href="#-1" class="headerlink" title="==="></a>===</h3><p>三等运算符更加严格并且不会将操作数进行强制类型转换。然而三等运算符也不是最好的解决方案，也存在问题：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NaN &#x3D;&#x3D;&#x3D; NaN &#x2F;&#x2F; false</span><br><span class="line">+0 &#x3D;&#x3D;&#x3D; -0 &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
-<h3 id="Object-is"><a href="#Object-is" class="headerlink" title="Object.is()"></a>Object.is()</h3><p>在 ES6 中有一个新的 <code>Object.is()</code>，它更精确，它具有与 <code>===</code> 相同的功能，而且在某些特殊情况下，其表现还不错：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Object.is(+0, -0) &#x2F;&#x2F; false</span><br><span class="line">Object.is(NaN, NaN) &#x2F;&#x2F; true</span><br><span class="line">Object.is(null, undefined) &#x2F;&#x2F; false</span><br><span class="line">Object.is([1], true) &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://img-blog.csdnimg.cn/20201006133331649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTA4ODMy,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://qiutianaimeili.com/html/page/2017/08/ap8d1w6oml.html">js 的隐性类型转换与 valueOf 和 toString</a></p>
-<p><a href="http://poetries1.gitee.io/fe-interview/docs/excellent.html#_2-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">FE-Inte-类型转换</a></p>
-]]></content>
-      <categories>
-        <category>js</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>执行函数和this</title>
     <url>/js/%E7%AC%94%E8%AE%B0/js/10.%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0%E5%92%8Cthis/</url>
     <content><![CDATA[<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p><strong>第一种，普通函数：用 function 关键字定义的函数</strong></p>
@@ -1060,6 +1012,54 @@
 <li>显示绑定: foo.call(obj, …)， foo.apply(obj,[…])，foo.bind(obj,…)</li>
 <li>构造绑定: new foo() ， 这种情况,，无论 foo 是否做了绑定, 都要创建一个新的对象， 然后 foo 中的 this 引用这个对象。</li>
 </ol>
+]]></content>
+      <categories>
+        <category>js</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js数据类型3</title>
+    <url>/js/%E7%AC%94%E8%AE%B0/js/1.3.JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h2 id="相等比较"><a href="#相等比较" class="headerlink" title="相等比较"></a>相等比较</h2><h3 id><a href="#" class="headerlink" title="=="></a>==</h3><p>在比较的时候会强制转换左右两边的数据类型</p>
+<ul>
+<li>对象 == 对象：比较地址</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;&#125;</span><br><span class="line"><span class="keyword">let</span> b = &#123;&#125;</span><br><span class="line">a == b <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>对象 == 字符串：对象转换为字符串</li>
+</ul>
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;&#125;</span><br><span class="line">a == <span class="string">&#x27;[object Object]&#x27;</span> <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>NaN == NaN：NaN 和自己以及其他值比较都不相等</p>
+</li>
+<li><p>null == undefined：在两个等于号下相等，三个等于号下不相等，并且和自己比较相等，和其他值比较都不相等</p>
+</li>
+<li><p>剩下的情况，只要两边类型不同，都转换为数字（遇到 <code>!</code> 会先转换为 boolean 再转换为数字）</p>
+<ul>
+<li>只有这 5 个可以转换为 boolean 的 false：<code>null</code>、<code>undefined</code>、<code>NaN</code>、<code>&#39;&#39;</code>（空字符串）、<code>0</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">!<span class="literal">null</span> <span class="comment">// true</span></span><br><span class="line">!<span class="literal">undefined</span> <span class="comment">// true</span></span><br><span class="line">!<span class="literal">NaN</span> <span class="comment">// true</span></span><br><span class="line">!<span class="string">&#x27;&#x27;</span> <span class="comment">// true</span></span><br><span class="line">!<span class="number">0</span> <span class="comment">// true</span></span><br><span class="line">![] <span class="comment">// false 引用类型转boolean都为true</span></span><br><span class="line">!<span class="string">&#x27; &#x27;</span> <span class="comment">// false //字符串转boolean，除了空串都为true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>遇到 [] 时，先 .toString() 转为字符串，字符串再变成数字</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[] &#x3D;&#x3D; false &#x2F;&#x2F; true，都转为数字再进行比较：先把[].toString()转为字符串，空字符串再变成数字0（Number(&#39;&#39;) &#x3D;&#x3D;&gt; 0），false转换为数字是0</span><br><span class="line">[0] &#x3D;&#x3D; false &#x2F;&#x2F; true，Number([0].toString()) --&gt; 0</span><br><span class="line">[1] &#x3D;&#x3D; true &#x2F;&#x2F; true，Number([1].toString()) --&gt; 1</span><br><span class="line">[2] &#x3D;&#x3D; true &#x2F;&#x2F; false，Number([2].toString()) --&gt; 2</span><br><span class="line">[] &#x3D;&#x3D; ![] &#x2F;&#x2F; true</span><br><span class="line">&#39; &#39; &#x3D;&#x3D; !&#39; &#39; &#x2F;&#x2F; true，Number(&#39; &#39;) &#x3D;&#x3D;&gt; 0</span><br><span class="line">+0 &#x3D;&#x3D; -0 &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+<p>  数组的 toString 转化为字符串，而对象的 toString 相当于 <code>Object.prototype.toString.call()</code> 结果是 <code>&quot;[object Object]&quot;</code></p>
+<p><img src="https://img-blog.csdnimg.cn/20201027111751868.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTA4ODMy,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<h3 id="-1"><a href="#-1" class="headerlink" title="==="></a>===</h3><p>三等运算符更加严格并且不会将操作数进行强制类型转换。然而三等运算符也不是最好的解决方案，也存在问题：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">NaN &#x3D;&#x3D;&#x3D; NaN &#x2F;&#x2F; false</span><br><span class="line">+0 &#x3D;&#x3D;&#x3D; -0 &#x2F;&#x2F; true</span><br></pre></td></tr></table></figure>
+<h3 id="Object-is"><a href="#Object-is" class="headerlink" title="Object.is()"></a>Object.is()</h3><p>在 ES6 中有一个新的 <code>Object.is()</code>，它更精确，它具有与 <code>===</code> 相同的功能，而且在某些特殊情况下，其表现还不错：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Object.is(+0, -0) &#x2F;&#x2F; false</span><br><span class="line">Object.is(NaN, NaN) &#x2F;&#x2F; true</span><br><span class="line">Object.is(null, undefined) &#x2F;&#x2F; false</span><br><span class="line">Object.is([1], true) &#x2F;&#x2F; false</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://img-blog.csdnimg.cn/20201006133331649.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTA4ODMy,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://qiutianaimeili.com/html/page/2017/08/ap8d1w6oml.html">js 的隐性类型转换与 valueOf 和 toString</a></p>
+<p><a href="http://poetries1.gitee.io/fe-interview/docs/excellent.html#_2-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">FE-Inte-类型转换</a></p>
 ]]></content>
       <categories>
         <category>js</category>
@@ -2295,6 +2295,62 @@
       </tags>
   </entry>
   <entry>
+    <title>js类</title>
+    <url>/js/%E7%AC%94%E8%AE%B0/js/4.apply()%E3%80%81call()%E3%80%81prototype%E7%9A%84%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="apply和call区别"><a href="#apply和call区别" class="headerlink" title="apply和call区别"></a>apply和call区别</h2><p>**apply:**能劫持另外一个对象的方法，继承另外一个对象的属性。</p>
+<blockquote>
+<p>Function.apply(obj, args)</p>
+<p>obj: 这个对象将代替Function类里this对象</p>
+<p>args: 这个是数组，它将作为参数传给Function(args–&gt;arguments)</p>
+</blockquote>
+<p>**call:**和apply的意思一样，只不过是参数列表不一样</p>
+<blockquote>
+<p>Function.call(obj, [param1[, param2[,…[,paramN]]]])</p>
+<p>obj:这个对象将代替Function类里的this对象</p>
+<p>params:这个是一个参数列表</p>
+</blockquote>
+<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><a id="more"></a>
+
+<p>(实现一个简单的new方法示例</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//构造函数</span></span><br><span class="line"><span class="keyword">let</span> Parent = <span class="function"><span class="keyword">function</span> (<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;;</span><br><span class="line">Parent.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newMethod = <span class="function"><span class="keyword">function</span> (<span class="params">Parent, ...rest</span>) </span>&#123; <span class="comment">//...rest为不定变量，指剩下的所有参数</span></span><br><span class="line">    <span class="comment">// 1.以构造器的prototype属性为原型，创建新对象；</span></span><br><span class="line">    <span class="keyword">let</span> child = <span class="built_in">Object</span>.create(Parent.prototype);</span><br><span class="line">    <span class="comment">// 2.将this和调用参数传给构造器执行</span></span><br><span class="line">    Parent.apply(child, rest);</span><br><span class="line">    <span class="comment">// 3.返回第一步的对象</span></span><br><span class="line">    <span class="keyword">return</span> child;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//创建一个实例，将构造函数Parent与形参作为参数传入</span></span><br><span class="line"><span class="keyword">const</span> child = newMethod(Parent, <span class="string">&#x27;echo&#x27;</span>, <span class="number">26</span>);</span><br><span class="line">child.sayName() <span class="comment">//&#x27;echo&#x27;;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//最后检验，与使用new的效果相同</span></span><br><span class="line">child <span class="keyword">instanceof</span> Parent<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;name&#x27;</span>)<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;age&#x27;</span>)<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;sayName&#x27;</span>)<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<p><strong>Parent.apply(child, rest)：</strong><br>传入的rest为[‘echo’, 26]<br>child去执行Parent类里面的内容，也就是把Parent中的属性引入新创建的child对象中。</p>
+<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name, age, grade</span>) </span>&#123;</span><br><span class="line">    People.call(<span class="built_in">this</span>, name, age);</span><br><span class="line">    <span class="built_in">this</span>.grade = grade;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Student(<span class="string">&#x27;小明&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;大三&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(student.name + student.age + student.grade);<span class="comment">//小明21大三</span></span><br></pre></td></tr></table></figure>
+<p>在这个例子中，我们并没有给<code>Student</code>的<code>name</code>和<code>age</code>赋值，但是存在这两个属性的值，这还是要归功于<code>call()</code>方法，它可以改变<code>this</code>的指向。</p>
+<p><strong>People.call(this, name, age):</strong></p>
+<p><code>this</code>代表的是<code>Student</code>，这也就是之前说的，使得<code>Student</code>可以调用<code>People</code>中的方法，因为<code>People</code>中有<code>this.name = name;</code>等语句，这样就将<code>name</code>和<code>age</code>属性创建到了<code>Student</code>中。</p>
+<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><p><code>call()</code>和<code>apply()</code>的不同点就是<strong>接收参数的方式不同</strong>。</p>
+<p><strong>apply()方法</strong>接收两个参数，一个是函数运行的作用域（<code>this</code>），另一个是参数数组。</p>
+<p><strong>call()方法</strong>不一定接受两个参数，第一个参数也是函数运行的作用域（<code>this</code>），但是传递给函数的参数必须列举出来。</p>
+<h3 id="apply妙用"><a href="#apply妙用" class="headerlink" title="apply妙用"></a>apply妙用</h3><h5 id="1）-Math-max可以实现得到数组中最大的一项"><a href="#1）-Math-max可以实现得到数组中最大的一项" class="headerlink" title="1） Math.max可以实现得到数组中最大的一项"></a>1） Math.max可以实现得到数组中最大的一项</h5><p>但是因为<code>Math.max</code>参数里面不支持<code>Math.max([param1,param2])</code>，也就是数组，但是它支持<code>Math.max(param1,param2,param3…)</code>，所以可以根据<code>apply</code>的那个特点来解决：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, array);</span><br><span class="line"><span class="built_in">console</span>.log(max);<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<p>这样轻易的可以得到一个数组中最大的一项，<code>apply</code>会将一个数组转换为一个参数接一个参数的传递给方法，这块在调用的时候第一个参数给了一个<code>null</code>，这个是因为没有对象去调用这个方法，我们只需要用这个方法帮我运算，得到返回的结果就行，所以直接传递了一个<code>null</code>过去，当然，第一个参数使用<code>this</code>也是可以的</p>
+<p>同理 Math.min() 也是一样的</p>
+<h5 id="2）Array-prototype-push可以实现两个数组合并"><a href="#2）Array-prototype-push可以实现两个数组合并" class="headerlink" title="2）Array.prototype.push可以实现两个数组合并"></a>2）Array.prototype.push可以实现两个数组合并</h5><p>同样的，<code>push</code>方法没有提供<code>push</code>一个数组，但是它提供了<code>push(param1,param,…paramN)</code>所以同样也可以通过<code>apply</code>来装换一下这个数组，即:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="built_in">Array</span>.prototype.push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
+<p>或者：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr1.push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
+<p>还有：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">[].push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>当目标函数只需要n个参数列表，不接收一个数组的形式（<code>[param1[,param2[,…[,paramN]]]]</code>）时，我们就可以通过<code>apply</code>的方式来巧妙地解决。</p>
+<h2 id="prototype用法"><a href="#prototype用法" class="headerlink" title="prototype用法"></a>prototype用法</h2><p>注意点：new实例创建之后，再使用<strong>对象字面量</strong>重新赋值给prototype，<strong>prototype</strong>的指向地址换成了<strong>新的</strong>object的地址。而之前那个<strong>实例</strong>指向的还是<strong>原有的</strong>默认的prototype地址，使得之前的实例指向的曾经的prototype<strong>变得不可联系</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如果要在实例之后用prototype的话不要用对象字面量方法：</span></span><br><span class="line">Person.prototype=&#123;</span><br><span class="line">    name: <span class="string">&quot;Tom&quot;</span>,</span><br><span class="line">    age: <span class="number">20</span>,</span><br><span class="line">    saySomething: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&quot;What&#x27;s up?&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//而要用对prototype的属性直接赋值的方式：</span></span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.saySomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;What&#x27;s up?&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name: <span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br></pre></td></tr></table></figure>
+<p>结果为<strong>John</strong>,如果不直接给man添加一个自己的name属性的话，他会变成永远的John。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">Person.prototype = &#123; <span class="comment">//使用对象字面量，指向地址变化</span></span><br><span class="line">    name:<span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person(); <span class="comment">//创建的实例指向的是新的地址</span></span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>; <span class="comment">//使用直接赋值的方式改变name</span></span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br></pre></td></tr></table></figure>
+<p>结果为<strong>Tom</strong>,new创建新实例在已经改变为新地址之后。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name: <span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>结果为<strong>Mike</strong>，同样，实例创建在地址变化之后，而打印name在变为Tom之前。</p>
+<p>所以对象字面量重写会使得之前创建的实例与之后创建的实例实际指向不同的prototype。慎用之。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>对象分类</title>
     <url>/js/%E7%AC%94%E8%AE%B0/js/5.%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</url>
     <content><![CDATA[<p>对象可以分成几类：</p>
@@ -2537,62 +2593,6 @@
       </tags>
   </entry>
   <entry>
-    <title>js类</title>
-    <url>/js/%E7%AC%94%E8%AE%B0/js/4.apply()%E3%80%81call()%E3%80%81prototype%E7%9A%84%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="apply和call区别"><a href="#apply和call区别" class="headerlink" title="apply和call区别"></a>apply和call区别</h2><p>**apply:**能劫持另外一个对象的方法，继承另外一个对象的属性。</p>
-<blockquote>
-<p>Function.apply(obj, args)</p>
-<p>obj: 这个对象将代替Function类里this对象</p>
-<p>args: 这个是数组，它将作为参数传给Function(args–&gt;arguments)</p>
-</blockquote>
-<p>**call:**和apply的意思一样，只不过是参数列表不一样</p>
-<blockquote>
-<p>Function.call(obj, [param1[, param2[,…[,paramN]]]])</p>
-<p>obj:这个对象将代替Function类里的this对象</p>
-<p>params:这个是一个参数列表</p>
-</blockquote>
-<h3 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h3><a id="more"></a>
-
-<p>(实现一个简单的new方法示例</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//构造函数</span></span><br><span class="line"><span class="keyword">let</span> Parent = <span class="function"><span class="keyword">function</span> (<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;;</span><br><span class="line">Parent.prototype.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> newMethod = <span class="function"><span class="keyword">function</span> (<span class="params">Parent, ...rest</span>) </span>&#123; <span class="comment">//...rest为不定变量，指剩下的所有参数</span></span><br><span class="line">    <span class="comment">// 1.以构造器的prototype属性为原型，创建新对象；</span></span><br><span class="line">    <span class="keyword">let</span> child = <span class="built_in">Object</span>.create(Parent.prototype);</span><br><span class="line">    <span class="comment">// 2.将this和调用参数传给构造器执行</span></span><br><span class="line">    Parent.apply(child, rest);</span><br><span class="line">    <span class="comment">// 3.返回第一步的对象</span></span><br><span class="line">    <span class="keyword">return</span> child;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//创建一个实例，将构造函数Parent与形参作为参数传入</span></span><br><span class="line"><span class="keyword">const</span> child = newMethod(Parent, <span class="string">&#x27;echo&#x27;</span>, <span class="number">26</span>);</span><br><span class="line">child.sayName() <span class="comment">//&#x27;echo&#x27;;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//最后检验，与使用new的效果相同</span></span><br><span class="line">child <span class="keyword">instanceof</span> Parent<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;name&#x27;</span>)<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;age&#x27;</span>)<span class="comment">//true</span></span><br><span class="line">child.hasOwnProperty(<span class="string">&#x27;sayName&#x27;</span>)<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-<p><strong>Parent.apply(child, rest)：</strong><br>传入的rest为[‘echo’, 26]<br>child去执行Parent类里面的内容，也就是把Parent中的属性引入新创建的child对象中。</p>
-<h3 id="call"><a href="#call" class="headerlink" title="call"></a>call</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">People</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="built_in">this</span>.age = age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name, age, grade</span>) </span>&#123;</span><br><span class="line">    People.call(<span class="built_in">this</span>, name, age);</span><br><span class="line">    <span class="built_in">this</span>.grade = grade;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> student = <span class="keyword">new</span> Student(<span class="string">&#x27;小明&#x27;</span>, <span class="number">21</span>, <span class="string">&#x27;大三&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(student.name + student.age + student.grade);<span class="comment">//小明21大三</span></span><br></pre></td></tr></table></figure>
-<p>在这个例子中，我们并没有给<code>Student</code>的<code>name</code>和<code>age</code>赋值，但是存在这两个属性的值，这还是要归功于<code>call()</code>方法，它可以改变<code>this</code>的指向。</p>
-<p><strong>People.call(this, name, age):</strong></p>
-<p><code>this</code>代表的是<code>Student</code>，这也就是之前说的，使得<code>Student</code>可以调用<code>People</code>中的方法，因为<code>People</code>中有<code>this.name = name;</code>等语句，这样就将<code>name</code>和<code>age</code>属性创建到了<code>Student</code>中。</p>
-<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点"></a>不同点</h3><p><code>call()</code>和<code>apply()</code>的不同点就是<strong>接收参数的方式不同</strong>。</p>
-<p><strong>apply()方法</strong>接收两个参数，一个是函数运行的作用域（<code>this</code>），另一个是参数数组。</p>
-<p><strong>call()方法</strong>不一定接受两个参数，第一个参数也是函数运行的作用域（<code>this</code>），但是传递给函数的参数必须列举出来。</p>
-<h3 id="apply妙用"><a href="#apply妙用" class="headerlink" title="apply妙用"></a>apply妙用</h3><h5 id="1）-Math-max可以实现得到数组中最大的一项"><a href="#1）-Math-max可以实现得到数组中最大的一项" class="headerlink" title="1） Math.max可以实现得到数组中最大的一项"></a>1） Math.max可以实现得到数组中最大的一项</h5><p>但是因为<code>Math.max</code>参数里面不支持<code>Math.max([param1,param2])</code>，也就是数组，但是它支持<code>Math.max(param1,param2,param3…)</code>，所以可以根据<code>apply</code>的那个特点来解决：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, array);</span><br><span class="line"><span class="built_in">console</span>.log(max);<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<p>这样轻易的可以得到一个数组中最大的一项，<code>apply</code>会将一个数组转换为一个参数接一个参数的传递给方法，这块在调用的时候第一个参数给了一个<code>null</code>，这个是因为没有对象去调用这个方法，我们只需要用这个方法帮我运算，得到返回的结果就行，所以直接传递了一个<code>null</code>过去，当然，第一个参数使用<code>this</code>也是可以的</p>
-<p>同理 Math.min() 也是一样的</p>
-<h5 id="2）Array-prototype-push可以实现两个数组合并"><a href="#2）Array-prototype-push可以实现两个数组合并" class="headerlink" title="2）Array.prototype.push可以实现两个数组合并"></a>2）Array.prototype.push可以实现两个数组合并</h5><p>同样的，<code>push</code>方法没有提供<code>push</code>一个数组，但是它提供了<code>push(param1,param,…paramN)</code>所以同样也可以通过<code>apply</code>来装换一下这个数组，即:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="built_in">Array</span>.prototype.push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
-<p>或者：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">arr1.push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
-<p>还有：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">var</span> arr2 = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line">[].push.apply(arr1, arr2);</span><br><span class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[ 1, 2, 3, 4, 5, 6 ]</span></span><br></pre></td></tr></table></figure>
-<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>当目标函数只需要n个参数列表，不接收一个数组的形式（<code>[param1[,param2[,…[,paramN]]]]</code>）时，我们就可以通过<code>apply</code>的方式来巧妙地解决。</p>
-<h2 id="prototype用法"><a href="#prototype用法" class="headerlink" title="prototype用法"></a>prototype用法</h2><p>注意点：new实例创建之后，再使用<strong>对象字面量</strong>重新赋值给prototype，<strong>prototype</strong>的指向地址换成了<strong>新的</strong>object的地址。而之前那个<strong>实例</strong>指向的还是<strong>原有的</strong>默认的prototype地址，使得之前的实例指向的曾经的prototype<strong>变得不可联系</strong>。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如果要在实例之后用prototype的话不要用对象字面量方法：</span></span><br><span class="line">Person.prototype=&#123;</span><br><span class="line">    name: <span class="string">&quot;Tom&quot;</span>,</span><br><span class="line">    age: <span class="number">20</span>,</span><br><span class="line">    saySomething: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">&quot;What&#x27;s up?&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//而要用对prototype的属性直接赋值的方式：</span></span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.saySomething = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;What&#x27;s up?&quot;</span>);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name: <span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br></pre></td></tr></table></figure>
-<p>结果为<strong>John</strong>,如果不直接给man添加一个自己的name属性的话，他会变成永远的John。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">Person.prototype = &#123; <span class="comment">//使用对象字面量，指向地址变化</span></span><br><span class="line">    name:<span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person(); <span class="comment">//创建的实例指向的是新的地址</span></span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>; <span class="comment">//使用直接赋值的方式改变name</span></span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br></pre></td></tr></table></figure>
-<p>结果为<strong>Tom</strong>,new创建新实例在已经改变为新地址之后。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">&quot;John&quot;</span>;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    name: <span class="string">&quot;Mike&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> man = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="built_in">console</span>.log(man.name);</span><br><span class="line">Person.prototype.name = <span class="string">&quot;Tom&quot;</span>;</span><br></pre></td></tr></table></figure>
-<p>结果为<strong>Mike</strong>，同样，实例创建在地址变化之后，而打印name在变为Tom之前。</p>
-<p>所以对象字面量重写会使得之前创建的实例与之后创建的实例实际指向不同的prototype。慎用之。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS的异步操作</title>
     <url>/js/%E7%AC%94%E8%AE%B0/js/8.JS%E7%9A%84%E5%BC%82%E6%AD%A5%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><p>先执行func1()，执行成功后callback()告知，再执行func2()。</p>
@@ -2718,6 +2718,31 @@
       </tags>
   </entry>
   <entry>
+    <title>02_Vue的使用</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
+<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
+<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
+<a id="more"></a>
+
+<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
+<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
+<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
+<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
+<p>记住dom渲染完毕，是在mounted</p>
+<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
+<p><a href="https://imgchr.com/i/s9SqhV"><img src="https://s3.ax1x.com/2021/01/03/s9SqhV.png" alt="s9SqhV.png"></a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>01_初识Vue</title>
     <url>/Vue/%E7%AC%94%E8%AE%B0/vue/01-%E5%88%9D%E8%AF%86Vue/</url>
     <content><![CDATA[<h2 id="Vue渐进式的框架-声明式编程"><a href="#Vue渐进式的框架-声明式编程" class="headerlink" title="Vue渐进式的框架(声明式编程)"></a>Vue渐进式的框架(声明式编程)</h2><h3 id="什么是渐进式"><a href="#什么是渐进式" class="headerlink" title="什么是渐进式"></a>什么是渐进式</h3><p>​        渐进式意味着你可以将Vue作为你应用的一部分嵌入其中，带来更丰富的交互体验。</p>
@@ -2740,31 +2765,6 @@
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 <p>16</p>
-]]></content>
-      <categories>
-        <category>Vue</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>02_Vue的使用</title>
-    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/02-Vue%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="Vue的使用"><a href="#Vue的使用" class="headerlink" title="Vue的使用"></a>Vue的使用</h2><p>在js代码中使用Vue时，先构造一个vue对象的实例。</p>
-<p>Vue是个构造函数，该构造函数在创建实例时可向内部传入一个对象作为参数，对象内部可存放的属性有：</p>
-<p>el：其值为css选择器，表示该vue实例管理的DOM区域</p>
-<a id="more"></a>
-
-<p>data：其值为一个对象或一个函数，内部存储的是该管理DOM区域的数据</p>
-<p>methods：其值为一个对象，内部存储函数(事件监听的回调)<br><font color="red"><strong>注意：</strong></font>这些函数中如果使用了this则不能使用箭头函数。</p>
-<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><a href="https://www.cnblogs.com/caoyi/p/11356500.html">Vue生命周期详解</a></p>
-<p>创建前后 挂载前后 更新前后 销毁前后 一共八个生命周期</p>
-<p>记住dom渲染完毕，是在mounted</p>
-<p><strong>activated和deactivated</strong>这两个回调是<strong>只有在当组件在keep-alive中时（保持了状态）</strong>（否则执行的就是销毁回调了），当组件处于活跃中时调用前者，不活跃时调用后者。</p>
-<p><a href="https://imgchr.com/i/s9SqhV"><img src="https://s3.ax1x.com/2021/01/03/s9SqhV.png" alt="s9SqhV.png"></a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.bilibili.com/video/BV15741177Eh">coderwhy讲解Vue</a></p>
 ]]></content>
       <categories>
         <category>Vue</category>
@@ -3755,8 +3755,6 @@
 
 <p>Drag.vue</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;outBox&quot;&gt;</span><br><span class="line">    &lt;div</span><br><span class="line">      :class&#x3D;&quot;[&#39;suspendBox&#39;, &#123; move: !canDrag &#125;]&quot;</span><br><span class="line">      :style&#x3D;&quot;&#123;top:top+&#39;px&#39;,left:left+&#39;px&#39;&#125;&quot;</span><br><span class="line">      @mousedown&#x3D;&quot;start&quot;</span><br><span class="line">      @mousemove&#x3D;&quot;move&quot;</span><br><span class="line">      @mouseup&#x3D;&quot;stop&quot;</span><br><span class="line">      @mouseenter&#x3D;&quot;enter&quot;</span><br><span class="line">      @mouseleave&#x3D;&quot;leave&quot;</span><br><span class="line">    &gt;</span><br><span class="line">      &lt;slot&gt;&lt;&#x2F;slot&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props:&#123;</span><br><span class="line">    ableMove: &#123;type: Boolean, default: true&#125;,  &#x2F;&#x2F;是否可移动</span><br><span class="line">    ableHide: &#123;type: Boolean, default: true&#125;,  &#x2F;&#x2F;是否靠边隐藏</span><br><span class="line">    hoverShow: &#123;type: Boolean, default: true&#125;,  &#x2F;&#x2F;图标隐藏时 鼠标悬浮即展示，否则点击展示</span><br><span class="line">    distance: &#123;type: Number, default: 5&#125;,  &#x2F;&#x2F;距离边界多少px就隐藏</span><br><span class="line">    defaultX: &#123;type: Number, default: 1&#125;,  &#x2F;&#x2F;初始横坐标百分比</span><br><span class="line">    defaultY: &#123;type: Number, default: 0.9&#125;  &#x2F;&#x2F;初始纵坐标百分比</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      canDrag: false,</span><br><span class="line">      isClick: true,</span><br><span class="line">      x0: 0,</span><br><span class="line">      y0: 0,</span><br><span class="line">      top: null,</span><br><span class="line">      left: null</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">      let img &#x3D; document.querySelector(&quot;.suspendBox&quot;);</span><br><span class="line">      let box &#x3D; document.querySelector(&quot;.outBox&quot;);</span><br><span class="line">      this.left &#x3D; (box.offsetWidth - img.offsetWidth) * this.defaultX;</span><br><span class="line">      this.top &#x3D; (box.offsetHeight - img.offsetHeight) * this.defaultY;</span><br><span class="line">      setTimeout(()&#x3D;&gt;&#123;</span><br><span class="line">        this.hide()</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    start(e) &#123;</span><br><span class="line">      console.log(&quot;start&quot;);</span><br><span class="line">      e.preventDefault();   &#x2F;&#x2F;阻止默认的拖拽</span><br><span class="line">      if (e.button &#x3D;&#x3D; 0) &#123;</span><br><span class="line">        this.canDrag &#x3D; this.ableMove;</span><br><span class="line">        this.isClick &#x3D; true;</span><br><span class="line">        this.x0 &#x3D; e.clientX;</span><br><span class="line">        this.y0 &#x3D; e.clientY;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    move(e) &#123;</span><br><span class="line">      console.log(&quot;move&quot;);</span><br><span class="line">      if (this.canDrag &#x3D;&#x3D; true) &#123;</span><br><span class="line">        this.isClick &#x3D; false;</span><br><span class="line">        let x &#x3D; e.clientX - this.x0;</span><br><span class="line">        let y &#x3D; e.clientY - this.y0;</span><br><span class="line">        let img &#x3D; document.querySelector(&quot;.suspendBox&quot;);</span><br><span class="line">        let box &#x3D; document.querySelector(&quot;.outBox&quot;);</span><br><span class="line">        if (</span><br><span class="line">          img.offsetLeft + x &lt; 0 ||</span><br><span class="line">          img.offsetTop + y &lt; 0 ||</span><br><span class="line">          img.offsetLeft + x &gt; box.offsetWidth - img.offsetWidth ||</span><br><span class="line">          img.offsetTop + y &gt; box.offsetHeight - img.offsetHeight</span><br><span class="line">        ) &#123;</span><br><span class="line">          return false;</span><br><span class="line">        &#125;</span><br><span class="line">        this.left &#x3D; img.offsetLeft + x;</span><br><span class="line">        this.top &#x3D; img.offsetTop + y;</span><br><span class="line">        this.x0 &#x3D; e.clientX;</span><br><span class="line">        this.y0 &#x3D; e.clientY;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    stop() &#123;</span><br><span class="line">      this.canDrag &#x3D; false;</span><br><span class="line">      console.log(&quot;stop&quot;);</span><br><span class="line">      this.show();</span><br><span class="line">    &#125;,</span><br><span class="line">    enter() &#123;</span><br><span class="line">      console.log(&quot;enter&quot;);</span><br><span class="line">      if (this.hoverShow) &#123;</span><br><span class="line">        this.show();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    leave() &#123;</span><br><span class="line">      console.log(&quot;leave&quot;);</span><br><span class="line">      this.canDrag &#x3D; false;</span><br><span class="line">      this.hide();</span><br><span class="line">    &#125;,</span><br><span class="line">    show() &#123;</span><br><span class="line">      let img &#x3D; document.querySelector(&quot;.suspendBox&quot;);</span><br><span class="line">      let box &#x3D; document.querySelector(&quot;.outBox&quot;);</span><br><span class="line">      if (img.offsetLeft &lt; 0) &#123;</span><br><span class="line">        this.left &#x3D; 0;</span><br><span class="line">      &#125; else if (img.offsetLeft &gt; box.offsetWidth - img.offsetWidth) &#123;</span><br><span class="line">        this.left &#x3D; box.offsetWidth - img.offsetWidth</span><br><span class="line">      &#125; else if(this.isClick)&#123;</span><br><span class="line">        this.clickEvent()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    hide() &#123;</span><br><span class="line">      if (this.ableHide) &#123;</span><br><span class="line">        console.log(&quot;hide&quot;);</span><br><span class="line">        let img &#x3D; document.querySelector(&quot;.suspendBox&quot;);</span><br><span class="line">        let box &#x3D; document.querySelector(&quot;.outBox&quot;);</span><br><span class="line">        if (!this.canDrag &amp;&amp; img.offsetLeft &lt; this.distance) &#123;</span><br><span class="line">          this.left &#x3D; -img.offsetWidth * 2 &#x2F; 3;</span><br><span class="line">        &#125; else if (!this.canDrag &amp;&amp; img.offsetLeft &gt; box.offsetWidth - img.offsetWidth - this.distance) &#123;</span><br><span class="line">          this.left &#x3D; box.offsetWidth - img.offsetWidth &#x2F; 3</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    clickEvent() &#123;      &#x2F;&#x2F;悬浮窗的点击事件</span><br><span class="line">      console.log(&quot;悬浮窗的点击事件&quot;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.outBox &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">  position: absolute;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  z-index:100;</span><br><span class="line">  pointer-events: none;</span><br><span class="line">&#125;</span><br><span class="line">.suspendBox &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  pointer-events: auto;</span><br><span class="line">&#125;</span><br><span class="line">.move &#123;</span><br><span class="line">  transition: 0.3s linear;</span><br><span class="line">  -moz-transition: 0.3s linear; &#x2F;* Firefox 4 *&#x2F;</span><br><span class="line">  -webkit-transition: 0.3s linear; &#x2F;* Safari 和 Chrome *&#x2F;</span><br><span class="line">  -o-transition: 0.3s linear; &#x2F;* Opera *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
-
-
 
 
 
