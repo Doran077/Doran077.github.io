@@ -3884,4 +3884,36 @@
         <tag>Vue</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vue之获取元素宽高</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/13-vue%E4%B9%8B%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0%E5%AE%BD%E9%AB%98/</url>
+    <content><![CDATA[<p>写在 页面 方法 部分</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ref</span>=<span class="string">&quot;init&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<p>这里的 offsetHeight 是返回元素的宽度（包括元素宽度、内边距和边框，不包括外边距）</p>
+<p>let height= this.$refs.init.$el.offsetHeight;  </p>
+<p>这里的offsetHeight可以替换，用来获取其他的属性</p>
+<a id="more"></a>
+
+<p>offsetWidth       //返回元素的宽度（包括元素宽度、内边距和边框，不包括外边距）</p>
+<p>offsetHeight      //返回元素的高度（包括元素高度、内边距和边框，不包括外边距）</p>
+<p>clientWidth        //返回元素的宽度（包括元素宽度、内边距，不包括边框和外边距）</p>
+<p>clientHeight       //返回元素的高度（包括元素高度、内边距，不包括边框和外边距）</p>
+<p>style.width         //返回元素的宽度（包括元素宽度，不包括内边距、边框和外边距）</p>
+<p>style.height       //返回元素的高度（包括元素高度，不包括内边距、边框和外边距）</p>
+<p>scrollWidth       //返回元素的宽度（包括元素宽度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientWidth相同</p>
+<p>scrollHeigh       //返回元素的高度（包括元素高度、内边距和溢出尺寸，不包括边框和外边距），无溢出的情况，与clientHeight相同</p>
+<p>除此之外，还可以获取带有单位的数值</p>
+<p>let height = window.getComputedStyle(this.$refs.init).height; </p>
+<p>这样获取的值是有单位的。</p>
+]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>获取元素宽高</tag>
+      </tags>
+  </entry>
 </search>
