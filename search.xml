@@ -1898,7 +1898,7 @@
       </tags>
   </entry>
   <entry>
-    <title>14-vue之换行步骤条</title>
+    <title>vue之换行步骤条</title>
     <url>/Vue/%E7%AC%94%E8%AE%B0/vue/14-vue%E4%B9%8B%E6%8D%A2%E8%A1%8C%E6%AD%A5%E9%AA%A4%E6%9D%A1/</url>
     <content><![CDATA[<h2 id="vue之换行步骤条"><a href="#vue之换行步骤条" class="headerlink" title="vue之换行步骤条"></a>vue之换行步骤条</h2><h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><a href="https://imgse.com/i/zSEAJO"><img src="https://s1.ax1x.com/2022/11/09/zSEAJO.png" alt="zSEAJO.png"></a></p>
 <h3 id="首页需要这样的展示图，网上百度了半天，找了个类似的但是有很多问题。在此基础上优化了，直接上代码"><a href="#首页需要这样的展示图，网上百度了半天，找了个类似的但是有很多问题。在此基础上优化了，直接上代码" class="headerlink" title="首页需要这样的展示图，网上百度了半天，找了个类似的但是有很多问题。在此基础上优化了，直接上代码"></a>首页需要这样的展示图，网上百度了半天，找了个类似的但是有很多问题。在此基础上优化了，直接上代码</h3><a id="more"></a>
@@ -3935,6 +3935,55 @@
       </categories>
       <tags>
         <tag>小本本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue之样式穿透</title>
+    <url>/Vue/%E7%AC%94%E8%AE%B0/vue/15-vue%E4%B9%8B%E6%A0%B7%E5%BC%8F%E7%A9%BF%E9%80%8F/</url>
+    <content><![CDATA[<h2 id="vue样式穿透"><a href="#vue样式穿透" class="headerlink" title="vue样式穿透"></a>vue样式穿透</h2><h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>vue的style中设置scoped属性后，组件实现样式私有化。<br> 但是该组件又使用的其他组件库时(vant,elementui,自定义等)，该组件的style中的样式，优先级低，不生效，这个时候需要使用样式穿透(作用得更深)。</p>
+<h5 id="一、scoped底层原理"><a href="#一、scoped底层原理" class="headerlink" title="一、scoped底层原理"></a>一、scoped底层原理</h5><ul>
+<li>scoped是通过在DOM以及css中加上<code>data-v-xxx</code>唯一标识来实现样式私有化。</li>
+</ul>
+<p>1.加上scoped前</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">template</span>&gt;</span><br><span class="line">    &lt;div class=&quot;demo&quot;&gt;</span><br><span class="line">        样式穿透示例</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">template</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">style</span> &gt;</span><br><span class="line">    <span class="selector-class">.demo</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<p><img src="https://s1.ax1x.com/2022/11/09/zSGmZT.png" alt="zSGmZT.png"></p>
+<p>2.加上scoped后</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span> <span class="selector-tag">scoped</span>&gt;</span><br><span class="line">    <span class="selector-class">.demo</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0.5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2022/11/09/zSGZLV.png"></p>
+<p>通过图片可以看到scoped底层是通过在<code>DOM节点</code>中添加<code>data-v-xxx</code>，<code>CSS</code>中通过添加<code>[data-v-xxx]</code>属性过滤，提高优先级，来实现样式的私有化。</p>
+<h5 id="二、为什么需要样式穿透"><a href="#二、为什么需要样式穿透" class="headerlink" title="二、为什么需要样式穿透"></a>二、为什么需要样式穿透</h5><p>看一个场景实例：子组件根元素颜色为<code>红色</code>，非根元素为<code>蓝色</code>。<br> 父子两个组件<code>style</code>都使用<code>scoped</code>属性，在不修改子组件的前提下，在父组件上修改子组件的颜色为<code>绿色</code>。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// 子组件</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c1&quot;</span>&gt;</span></span><br><span class="line">        子组件根元素(red)</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;c2&quot;</span>&gt;</span></span><br><span class="line">            子组件非根元素(blue)</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.c1</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">dashed</span> <span class="selector-id">#000</span>;</span></span><br><span class="line">        margin-top: 10px;</span><br><span class="line">        padding: 5px;</span><br><span class="line">        color: red;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">dotted</span> <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">color</span><span class="selector-pseudo">:blue</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">// 父组件</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;demo&quot;</span>&gt;</span></span><br><span class="line">        父组件</span><br><span class="line">        <span class="tag">&lt;<span class="name">css-demo</span> <span class="attr">class</span>=<span class="string">&quot;son&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">css-demo</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> cssDemo <span class="keyword">from</span> <span class="string">&quot;./css-demo2.vue&quot;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> Vue.extend(&#123;</span></span><br><span class="line">    components:&#123; cssDemo &#125;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.demo</span>&#123;</span></span><br><span class="line">        width: 200px;</span><br><span class="line">        padding: 10px;</span><br><span class="line">        border: 1px solid rgba(0,0,0,1);</span><br><span class="line"></span><br><span class="line"><span class="css">        <span class="selector-tag">color</span>: <span class="selector-id">#000</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.son</span>&#123;</span></span><br><span class="line">        color: green;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.son</span> <span class="selector-class">.c2</span>&#123;</span></span><br><span class="line">        color: green !important;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span></span><br><span class="line">        color: green !important;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="css">    <span class="selector-class">.son</span><span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span></span><br><span class="line">        color: green !important;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2022/11/09/zSGVs0.png"></p>
+<p><img src="https://s1.ax1x.com/2022/11/09/zSGuoF.png"></p>
+<ul>
+<li>可以看到只有子组件的根元素作用有生效，但是子组件的非根元素样式并没有生效，即使使用了<code>!important</code>。</li>
+<li>scoped在渲染的时候，如果组件内部还有子组件，只会在子组件的根元素加上<code>data-v-xxx</code>属性。</li>
+</ul>
+<p>当加上样式穿透后</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 父组件</span><br><span class="line">&lt;<span class="selector-tag">style</span> <span class="selector-tag">scoped</span>&gt;</span><br><span class="line">    &gt;&gt;&gt; <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: green <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s1.ax1x.com/2022/11/09/zSGndU.png"></p>
+<p><img src="https://s1.ax1x.com/2022/11/10/zpFUbt.png"></p>
+<h5 id="三、样式穿透的方法"><a href="#三、样式穿透的方法" class="headerlink" title="三、样式穿透的方法"></a>三、样式穿透的方法</h5><p><code>vue</code>中针对不同的样式类型(<code>css</code>,<code>less</code>,<code>scss</code>)有不用的样式穿透方法。</p>
+<ul>
+<li><code>css</code> 使用 <code>&gt;&gt;&gt;</code></li>
+<li><code>less</code> 使用 <code>/deep/</code></li>
+<li><code>scss</code> 使用 <code>::v-deep</code></li>
+</ul>
+<p>1.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span> <span class="selector-tag">scoped</span>&gt;</span><br><span class="line">    &gt;&gt;&gt; <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: green <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>2.less</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style scoped lang=&quot;less&quot;&gt;</span><br><span class="line">    /<span class="selector-tag">deep</span>/ <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: green <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>3.scss</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&lt;style scoped lang=”scss“&gt;</span><br><span class="line">    <span class="selector-pseudo">::v-deep</span> <span class="selector-class">.c1</span> <span class="selector-class">.c2</span>&#123;</span><br><span class="line">        <span class="attribute">color</span>: green <span class="meta">!important</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/<span class="selector-tag">style</span>&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Vue</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>换行步骤条</tag>
       </tags>
   </entry>
 </search>
