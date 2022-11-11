@@ -3986,4 +3986,169 @@
         <tag>换行步骤条</tag>
       </tags>
   </entry>
+  <entry>
+    <title>webstorm之解决目前阶段翻译插件Translation谷歌翻译的问题</title>
+    <url>/webstorm/webstorm/1-webstorm%E4%B9%8B%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>从上个月起IDEA翻译插件Translation的谷歌翻译不能使用了，今天特地的写下这篇文章，本篇文章内容大部分来自网络上一些大牛给的建议，并且亲测有效。</p>
+<h3 id="1-复活谷歌翻译"><a href="#1-复活谷歌翻译" class="headerlink" title="1.复活谷歌翻译"></a>1.复活谷歌翻译</h3><p>Google翻译API突然不能用，其原因是Google重定向了中国的Google翻译网页版，直接把API也重定向了，所以我们通过修改hosts文件来实现谷歌翻译复活。</p>
+<p>因为需要修改hosts文件所以我把相关操作系统的文件路径给大家：</p>
+<p>Windows：C:\Windows\System32\drivers\etc\hosts<br>Mac：/etc/hosts<br>Linux：/etc/hosts<br>Android：/system/etc/hosts<br>iOS：/etc/hosts</p>
+<a id="more"></a>
+
+<p>因为谷歌在国内有很多服务器，所有我们只需要要找到离自己最近的谷歌服务器IP，可以通过ping的方法，寻找到国内的谷歌IP地址。</p>
+<p>可以直接通过 <strong>ping google.cn -t</strong> 命令来获取。</p>
+<p>也可以通过 <a href="https://ping.chinaz.com/translate.google.cn">https://ping.chinaz.com/translate.google.cn</a> 这个网址来查看相关的最近谷歌IP地址。</p>
+<p>接下来就可以修改hosts文件了。</p>
+<p>因为很多电脑的hosts文件都是“只读”，因此我们需要先修改 hosts 文件的属性，然后把“只读”去掉勾即可。</p>
+<p>接下来可以用记事本打开 hosts 文件并且在最后一行添加获取到的： </p>
+<p>谷歌ip地址+空格+translate.googleapis.com</p>
+<p>例如我获取到的谷歌IP地址是：220.181.174.98</p>
+<p>在hosts文件末尾添加 220.181.174.98 translate.googleapis.com</p>
+<p>保存后再用谷歌即可正常翻译了</p>
+<h3 id="2-使用其它翻译–例如：有道翻译"><a href="#2-使用其它翻译–例如：有道翻译" class="headerlink" title="2.使用其它翻译–例如：有道翻译"></a>2.使用其它翻译–例如：有道翻译</h3><p>首先使用有道翻译前我们需要获取到有道翻译的应用id和密钥</p>
+<p>没有的我们需要注册一个有道翻译的账号</p>
+<p><a href="https://imgse.com/i/zC9HN8"><img src="https://s1.ax1x.com/2022/11/11/zC9HN8.png" alt="zC9HN8.png"></a></p>
+<p>注册好账号之后在应用总览里创建一个应用</p>
+<p><a href="https://imgse.com/i/zC9b4S"><img src="https://s1.ax1x.com/2022/11/11/zC9b4S.png" alt="zC9b4S.png"></a></p>
+<p> 创建好应用之后就能够在应用总览里看到自己的应用ID和密钥</p>
+<p>填写到IDEA的翻译插件里就能够使用了</p>
+]]></content>
+      <categories>
+        <category>webstorm</category>
+      </categories>
+      <tags>
+        <tag>webstorm</tag>
+        <tag>Translation翻译插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>webstorm之好用的插件</title>
+    <url>/webstorm/webstorm/2-webstorm%E4%B9%8B%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6%20/</url>
+    <content><![CDATA[<h2 id="webstorm必装十大插件"><a href="#webstorm必装十大插件" class="headerlink" title="webstorm必装十大插件"></a>webstorm必装十大插件</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 作为一个FE开发者，在日常工作中用的最多的可能就是WebStorm与VsCode，我在工作的这几年一直使用的是WebStorm进行开发，今天为大家带来我工作中使用的一些Webstorm插件以及一些可以提效的配置方法，希望能够帮助使用WebStorm的朋友们更加高效工作，多余时间可以多摸摸🐟！</p>
+<h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/eb6f2a12a0ff940532515d287b297f93.png?imageView2/2/w/1620" alt="img">;</p>
+<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><blockquote>
+<p> 下面会详细介绍每一个插件的安装、使用建议，推荐指数✨ </p>
+</blockquote>
+<h3 id="ignore-版本管理工具的忽略文件插件"><a href="#ignore-版本管理工具的忽略文件插件" class="headerlink" title=".ignore: 版本管理工具的忽略文件插件"></a><strong>.ignore</strong>: 版本管理工具的忽略文件插件</h3><ul>
+<li>插件描述：支持创建多种.ignore文件，会默认设置到需要忽略的文件或文件夹，我常用的是.gitignore，用于常见前端常见的需要忽略提交的文件，如node_modules，dist等；支持将文件旋选中右键进行添加到.gitignore；</li>
+<li>安装方式：webstorm内部插件市场搜索<code>.ignore</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7495--ignore">https://plugins.jetbrains.com/plugin/7495–ignore</a></li>
+<li>使用效果：个人感觉很实用，会非常方便，有时候如果已经将文件添加到git提交缓存中的时候，需要使用命令清除缓存把文件撤销出来，这个插件可以帮助你完成这一步。更多功能需要自己使用进行发掘</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/5b454bd70023be28891049199b62e20a.gif" alt="img">;</p>
+<h3 id="Power-Mode-II-打字特效"><a href="#Power-Mode-II-打字特效" class="headerlink" title="Power Mode II: 打字特效"></a><strong>Power Mode II</strong>: 打字特效</h3><ul>
+<li>插件描述：炫酷的打字效果，除了炫酷，没任何卵用，屏幕抖动的看着难受；</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Power Mode II</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8251-power-mode-ii">https://plugins.jetbrains.com/plugin/8251-power-mode-ii</a></li>
+<li>使用效果：装13可以，效果不大</li>
+<li>推荐指数：🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/0d700ddad731a91014d7d4a8eaa2fb67.gif" alt="img">;</p>
+<h3 id="activate-power-mode-打字特效"><a href="#activate-power-mode-打字特效" class="headerlink" title="activate-power-mode: 打字特效"></a><strong>activate-power-mode</strong>: 打字特效</h3><ul>
+<li>插件描述：与Power Mode II类似，效果更爆炸</li>
+<li>安装方式：webstorm内部插件市场搜索<code>activate-power-mode</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8330-activate-power-mode">https://plugins.jetbrains.com/plugin/8330-activate-power-mode</a></li>
+<li>使用效果：头晕式摸鱼</li>
+<li>推荐指数：🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/3efe2a0ce3e25b949bb3a25ff8355547.gif" alt="img">;</p>
+<h3 id="CodeSearch-右键搜索-通过Google搜索-墙内不能用"><a href="#CodeSearch-右键搜索-通过Google搜索-墙内不能用" class="headerlink" title="CodeSearch: 右键搜索(通过Google搜索,墙内不能用)"></a><strong>CodeSearch</strong>: 右键搜索(通过Google搜索,墙内不能用)</h3><ul>
+<li>插件描述：选中某段内容，可以直接右键通过搜索引擎搜索进行搜索；需要配置搜索引擎，可以配置Baidu, Google, StackOverflow and GitHub四种</li>
+<li>安装方式：webstorm内部插件市场搜索<code>codeSearch</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/12578-codesearch">https://plugins.jetbrains.com/plugin/12578-codesearch</a></li>
+<li>使用效果：实用性挺高，很方便的帮助搜索，安装以后就可以选中要搜索的东西</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/d75bb87d70276c7652a6e730fcec6e1b.png?imageView2/2/w/1620" alt="img">;</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/a5a11ba53415aee24f2a5267b1955889.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="Rainbow-Brackets-括号换色提示插件"><a href="#Rainbow-Brackets-括号换色提示插件" class="headerlink" title="Rainbow Brackets: 括号换色提示插件"></a><strong>Rainbow Brackets</strong>: 括号换色提示插件</h3><ul>
+<li>插件描述：代码中如果嵌套较深的话，找前面的括号与后面对应的地方会很麻烦，这款插件使用不同颜色进行标记，可以很方便的找到对应的开始和结尾的括号</li>
+<li>安装方式：webstorm内部插件市场搜索<code>.ignore</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets">https://plugins.jetbrains.com/plugin/10080-rainbow-brackets</a></li>
+<li>使用效果：个人感觉比较方便，可以快速定位，并且代码界面也会看起来更好看一点，愉悦心情，开心coding；</li>
+<li>推荐指数：🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/1c7197f0cbf2eb1c43af27a27d2a1bda.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="Translation-翻译插件"><a href="#Translation-翻译插件" class="headerlink" title="Translation: 翻译插件"></a><strong>Translation</strong>: 翻译插件</h3><ul>
+<li>插件描述：翻译插件，可以便捷的在WebStorm中进行翻译，省去了去浏览器进行翻译的操作，也支持右键方式选中翻译</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Translation</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8579-translation">https://plugins.jetbrains.com/plugin/8579-translation</a></li>
+<li>使用效果：翻译更便捷啦，但是还是要多动脑子想一想呀</li>
+<li>推荐指数：🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/72c312c540c5cb120b142a21a3639138.png?imageView2/2/w/1620" alt="img">;</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/cb7cf5a2ef833b78401c0364f1653f5f.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="AceJump-光标快速定位"><a href="#AceJump-光标快速定位" class="headerlink" title="AceJump: 光标快速定位"></a><strong>AceJump</strong>: 光标快速定位</h3><ul>
+<li>插件描述：AceJump 允许您将插入符号快速导航到编辑器中可见的任何位置，使用方式快捷键：Ctrl+;</li>
+<li>安装方式：webstorm内部插件市场搜索<code>AceJump</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7086-acejump">https://plugins.jetbrains.com/plugin/7086-acejump</a></li>
+<li>使用效果：用的不是很多，得使用快捷键，也不是很方便，马马虎虎吧，看个人喜好</li>
+<li>推荐指数：🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/739b306abe0da13e1e717b3c556a5f2d.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"><a href="#Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错" class="headerlink" title="Material Theme UI: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"></a><strong>Material Theme UI</strong>: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错</h3><ul>
+<li>插件描述：众所周知，一款很出名的主题</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Material Theme UI</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui">https://plugins.jetbrains.com/plugin/8006-material-theme-ui</a></li>
+<li>使用效果：根据个人喜好吧，自己喜欢的才是最好的</li>
+<li>推荐指数：🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/74e30575d0323270d1a53e4c1284faec.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度"><a href="#CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度" class="headerlink" title="CodeGlance: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度"></a><strong>CodeGlance</strong>: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度</h3><ul>
+<li>插件描述：可以在打开的窗口右边显示小地图，用于快速定位跳转，尤其是针对很多行的文件，就很方便的；</li>
+<li>安装方式：webstorm内部插件市场搜索<code>CodeGlance</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7275-codeglance">https://plugins.jetbrains.com/plugin/7275-codeglance</a></li>
+<li>使用效果：可以配置小地图宽度，可以设置固定宽，也可以拖拉设置宽度</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/c8d9cfd44112792ced1b9195f8bb2ce8.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="Codota-AI代码生成，自动联想，支持javaScript和java；"><a href="#Codota-AI代码生成，自动联想，支持javaScript和java；" class="headerlink" title="Codota: AI代码生成，自动联想，支持javaScript和java；"></a><strong>Codota</strong>: AI代码生成，自动联想，支持javaScript和java；</h3><ul>
+<li>插件描述：代码联想，不用过多解释了</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Codota</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript">https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript</a></li>
+<li>使用效果：我用的觉得还行，它可以快捷显示之前输入过的内容，或者快捷生成函数等，可以提升写代码的速度</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/77060a0d1b1b6f7a85ac45497c715c6d.gif" alt="img">;</p>
+<h3 id="Atom-Material-Icons-文件图标、系统图标会更好看；"><a href="#Atom-Material-Icons-文件图标、系统图标会更好看；" class="headerlink" title="Atom Material Icons: 文件图标、系统图标会更好看；"></a><strong>Atom Material Icons</strong>: 文件图标、系统图标会更好看；</h3><ul>
+<li>插件描述：为文件夹、文件增加图标，让编译器看起来更美观，也是一款可以愉快coding的好用插件</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Atom Material Icons</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/10044-atom-material-icons">https://plugins.jetbrains.com/plugin/10044-atom-material-icons</a></li>
+<li>使用效果：针不戳啊针不戳</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/33e721b76647947f3e7867c4df74db05.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"><a href="#GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；" class="headerlink" title="GitToolBox: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"></a><strong>GitToolBox</strong>: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；</h3><ul>
+<li>插件描述：没记错的话VsCode里面也有一款类似的插件，可以看见每行代码是谁、在什么时候提交的，提交message是什么，不用再使用Annote with Git Blame了</li>
+<li>安装方式：webstorm内部插件市场搜索<code>GitToolBox</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7499-gittoolbox">https://plugins.jetbrains.com/plugin/7499-gittoolbox</a></li>
+<li>使用效果：方便啊方便，非常方便的！！一看有bug，就知道是谁写的这垃圾代码了！</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/1b1612f05ea3352569b446c624facb44.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"><a href="#Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便" class="headerlink" title="Paste images into MarkDown: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"></a><strong>Paste images into MarkDown</strong>: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便</h3><ul>
+<li>插件描述：在WebStorm写markdwon文档的时候，有时候需要增加图片可能要先将图片放到文件夹，再在markdown中引用，那么这个插件可以很好的解决问题，剪贴板上有图片信息，直接ctrl+V进行粘贴</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Paste images into MarkDown</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown">https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown</a></li>
+<li>使用效果：提升效率的利器，还可以设置图片存储路径，是否是圆角、图片大小等</li>
+<li>推荐指数：🌟🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/481944805d40b115bc7deaeca13f7647.png?imageView2/2/w/1620" alt="img">;</p>
+<p>好啦，可以写出来的常用的就这些基本插件啦，更多的插件可以去我的博客了解：<a href="https://blog.wangboweb.site/2019/08/17/63952.html">https://blog.wangboweb.site/2019/08/17/63952.html</a></p>
+<h2 id="设置一下"><a href="#设置一下" class="headerlink" title="设置一下"></a>设置一下</h2><h3 id="字体以及UI、展示风格"><a href="#字体以及UI、展示风格" class="headerlink" title="字体以及UI、展示风格"></a>字体以及UI、展示风格</h3><p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/7f2fa3bbfe8b5a8f4de95523856d7046.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="文件模板设置"><a href="#文件模板设置" class="headerlink" title="文件模板设置"></a>文件模板设置</h3><p>详情：<a href="https://blog.wangboweb.site/2021/08/04/60426.html">https://blog.wangboweb.site/2021/08/04/60426.html</a> </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/1c2219ca00bad3fd52d12ab195d395ee.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="配置信息备份"><a href="#配置信息备份" class="headerlink" title="配置信息备份"></a>配置信息备份</h3><p>可以备份到云上，也可以备份到jetbrains 账户上 </p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/c068ea2bda0a5dfb89820f3a9b1a6e41.png?imageView2/2/w/1620" alt="img">;</p>
+<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/fc9802e91e4e07bbe545c7589cb47899.png?imageView2/2/w/1620" alt="img">;</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 大概就是这么多了，其实很多功能在日常开发中不一定会用到，但是一旦发现了，就会很顺手，需要自己多多探索，打造一个适合自己的编译器，才能真正的提高开发效率！！！</p>
+]]></content>
+      <categories>
+        <category>webstorm</category>
+      </categories>
+      <tags>
+        <tag>webstorm</tag>
+      </tags>
+  </entry>
 </search>
