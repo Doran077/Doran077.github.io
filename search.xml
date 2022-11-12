@@ -39,7 +39,7 @@
     <title>webstorm之好用的插件1</title>
     <url>/webstorm/webstorm/2-webstorm%E4%B9%8B%E5%A5%BD%E7%94%A8%E7%9A%84%E6%8F%92%E4%BB%B6%20/</url>
     <content><![CDATA[<h2 id="webstorm必装插件"><a href="#webstorm必装插件" class="headerlink" title="webstorm必装插件"></a>webstorm必装插件</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 作为一个FE开发者，在日常工作中用的最多的可能就是WebStorm与VsCode，我在工作的这几年一直使用的是WebStorm进行开发，今天为大家带来我工作中使用的一些Webstorm插件以及一些可以提效的配置方法，希望能够帮助使用WebStorm的朋友们更加高效工作，多余时间可以多摸摸🐟！</p>
-<h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><a href="https://imgse.com/i/zCaIr4"><img src="https://s1.ax1x.com/2022/11/11/zCaIr4.png" alt="zCaIr4.png"></a></p>
+<h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="https://s1.imagehub.cc/images/2022/11/12/1.png" alt="1.png"></p>
 <h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><blockquote>
 <p> 下面会详细介绍每一个插件的安装、使用建议，推荐指数✨ </p>
 </blockquote>
@@ -52,6 +52,7 @@
 </ul>
 <a id="more"></a>
 
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/2.gif" alt="2.gif"></p>
 <h3 id="Power-Mode-II-打字特效"><a href="#Power-Mode-II-打字特效" class="headerlink" title="Power Mode II: 打字特效"></a><strong>Power Mode II</strong>: 打字特效</h3><ul>
 <li>插件描述：炫酷的打字效果，除了炫酷，没任何卵用，屏幕抖动的看着难受；</li>
 <li>安装方式：webstorm内部插件市场搜索<code>Power Mode II</code>或官方地址下载到本地进行安装</li>
@@ -59,6 +60,7 @@
 <li>使用效果：装13可以，效果不大</li>
 <li>推荐指数：🌟🌟 </li>
 </ul>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/3.gif" alt="3.gif"></p>
 <h3 id="activate-power-mode-打字特效"><a href="#activate-power-mode-打字特效" class="headerlink" title="activate-power-mode: 打字特效"></a><strong>activate-power-mode</strong>: 打字特效</h3><ul>
 <li>插件描述：与Power Mode II类似，效果更爆炸</li>
 <li>安装方式：webstorm内部插件市场搜索<code>activate-power-mode</code>或官方地址下载到本地进行安装</li>
@@ -66,6 +68,7 @@
 <li>使用效果：头晕式摸鱼</li>
 <li>推荐指数：🌟🌟 </li>
 </ul>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/4.gif" alt="4.gif"></p>
 <h3 id="CodeSearch-右键搜索-通过Google搜索-墙内不能用"><a href="#CodeSearch-右键搜索-通过Google搜索-墙内不能用" class="headerlink" title="CodeSearch: 右键搜索(通过Google搜索,墙内不能用)"></a><strong>CodeSearch</strong>: 右键搜索(通过Google搜索,墙内不能用)</h3><ul>
 <li>插件描述：选中某段内容，可以直接右键通过搜索引擎搜索进行搜索；需要配置搜索引擎，可以配置Baidu, Google, StackOverflow and GitHub四种</li>
 <li>安装方式：webstorm内部插件市场搜索<code>codeSearch</code>或官方地址下载到本地进行安装</li>
@@ -73,8 +76,8 @@
 <li>使用效果：实用性挺高，很方便的帮助搜索，安装以后就可以选中要搜索的东西</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCaWGV"><img src="https://s1.ax1x.com/2022/11/11/zCaWGV.png" alt="zCaWGV.png"></a></p>
-<p><a href="https://imgse.com/i/zCaf2T"><img src="https://s1.ax1x.com/2022/11/11/zCaf2T.png" alt="zCaf2T.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/5.png" alt="5.png"></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/6.png" alt="6.png"></p>
 <h3 id="Rainbow-Brackets-括号换色提示插件"><a href="#Rainbow-Brackets-括号换色提示插件" class="headerlink" title="Rainbow Brackets: 括号换色提示插件"></a><strong>Rainbow Brackets</strong>: 括号换色提示插件</h3><ul>
 <li>插件描述：代码中如果嵌套较深的话，找前面的括号与后面对应的地方会很麻烦，这款插件使用不同颜色进行标记，可以很方便的找到对应的开始和结尾的括号</li>
 <li>安装方式：webstorm内部插件市场搜索<code>.ignore</code>或官方地址下载到本地进行安装</li>
@@ -82,7 +85,7 @@
 <li>使用效果：个人感觉比较方便，可以快速定位，并且代码界面也会看起来更好看一点，愉悦心情，开心coding；</li>
 <li>推荐指数：🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCag5q"><img src="https://s1.ax1x.com/2022/11/11/zCag5q.png" alt="zCag5q.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/7.png" alt="7.png"></p>
 <h3 id="Translation-翻译插件"><a href="#Translation-翻译插件" class="headerlink" title="Translation: 翻译插件"></a><strong>Translation</strong>: 翻译插件</h3><ul>
 <li>插件描述：翻译插件，可以便捷的在WebStorm中进行翻译，省去了去浏览器进行翻译的操作，也支持右键方式选中翻译</li>
 <li>安装方式：webstorm内部插件市场搜索<code>Translation</code>或官方地址下载到本地进行安装</li>
@@ -90,8 +93,8 @@
 <li>使用效果：翻译更便捷啦，但是还是要多动脑子想一想呀</li>
 <li>推荐指数：🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCaRP0"><img src="https://s1.ax1x.com/2022/11/11/zCaRP0.png" alt="zCaRP0.png"></a></p>
-<p><a href="https://imgse.com/i/zCaoqJ"><img src="https://s1.ax1x.com/2022/11/11/zCaoqJ.png" alt="zCaoqJ.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/8.png" alt="8.png"></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/9.png" alt="9.png"></p>
 <h3 id="AceJump-光标快速定位"><a href="#AceJump-光标快速定位" class="headerlink" title="AceJump: 光标快速定位"></a><strong>AceJump</strong>: 光标快速定位</h3><ul>
 <li>插件描述：AceJump 允许您将插入符号快速导航到编辑器中可见的任何位置，使用方式快捷键：Ctrl+;</li>
 <li>安装方式：webstorm内部插件市场搜索<code>AceJump</code>或官方地址下载到本地进行安装</li>
@@ -99,7 +102,15 @@
 <li>使用效果：用的不是很多，得使用快捷键，也不是很方便，马马虎虎吧，看个人喜好</li>
 <li>推荐指数：🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCahxU"><img src="https://s1.ax1x.com/2022/11/11/zCahxU.png" alt="zCahxU.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/10.png" alt="10.png"></p>
+<h3 id="Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"><a href="#Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错" class="headerlink" title="Material Theme UI: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"></a><strong>Material Theme UI</strong>: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错</h3><ul>
+<li>插件描述：众所周知，一款很出名的主题</li>
+<li>安装方式：webstorm内部插件市场搜索<code>Material Theme UI</code>或官方地址下载到本地进行安装</li>
+<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui">https://plugins.jetbrains.com/plugin/8006-material-theme-ui</a></li>
+<li>使用效果：根据个人喜好吧，自己喜欢的才是最好的</li>
+<li>推荐指数：🌟🌟🌟🌟 </li>
+</ul>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/11.png" alt="11.png"></p>
 ]]></content>
       <categories>
         <category>webstorm</category>
@@ -114,14 +125,6 @@
     <content><![CDATA[<h2 id="webstorm必装插件"><a href="#webstorm必装插件" class="headerlink" title="webstorm必装插件"></a>webstorm必装插件</h2><h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><blockquote>
 <p> 下面会详细介绍每一个插件的安装、使用建议，推荐指数✨ </p>
 </blockquote>
-<h3 id="Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"><a href="#Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错" class="headerlink" title="Material Theme UI: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"></a><strong>Material Theme UI</strong>: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错</h3><ul>
-<li>插件描述：众所周知，一款很出名的主题</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Material Theme UI</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui">https://plugins.jetbrains.com/plugin/8006-material-theme-ui</a></li>
-<li>使用效果：根据个人喜好吧，自己喜欢的才是最好的</li>
-<li>推荐指数：🌟🌟🌟🌟 </li>
-</ul>
-<p><a href="https://imgse.com/i/zCa5MF"><img src="https://s1.ax1x.com/2022/11/11/zCa5MF.png" alt="zCa5MF.png"></a></p>
 <h3 id="CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度"><a href="#CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度" class="headerlink" title="CodeGlance: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度"></a><strong>CodeGlance</strong>: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度</h3><ul>
 <li>插件描述：可以在打开的窗口右边显示小地图，用于快速定位跳转，尤其是针对很多行的文件，就很方便的；</li>
 <li>安装方式：webstorm内部插件市场搜索<code>CodeGlance</code>或官方地址下载到本地进行安装</li>
@@ -129,9 +132,7 @@
 <li>使用效果：可以配置小地图宽度，可以设置固定宽，也可以拖拉设置宽度</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
-<a id="more"></a>
-
-<p><a href="https://imgse.com/i/zCaHaR"><img src="https://s1.ax1x.com/2022/11/11/zCaHaR.png" alt="zCaHaR.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/12.png" alt="12.png"></p>
 <h3 id="Codota-AI代码生成，自动联想，支持javaScript和java；"><a href="#Codota-AI代码生成，自动联想，支持javaScript和java；" class="headerlink" title="Codota: AI代码生成，自动联想，支持javaScript和java；"></a><strong>Codota</strong>: AI代码生成，自动联想，支持javaScript和java；</h3><ul>
 <li>插件描述：代码联想，不用过多解释了</li>
 <li>安装方式：webstorm内部插件市场搜索<code>Codota</code>或官方地址下载到本地进行安装</li>
@@ -139,6 +140,7 @@
 <li>使用效果：我用的觉得还行，它可以快捷显示之前输入过的内容，或者快捷生成函数等，可以提升写代码的速度</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/13.gif" alt="13.gif"></p>
 <h3 id="Atom-Material-Icons-文件图标、系统图标会更好看；"><a href="#Atom-Material-Icons-文件图标、系统图标会更好看；" class="headerlink" title="Atom Material Icons: 文件图标、系统图标会更好看；"></a><strong>Atom Material Icons</strong>: 文件图标、系统图标会更好看；</h3><ul>
 <li>插件描述：为文件夹、文件增加图标，让编译器看起来更美观，也是一款可以愉快coding的好用插件</li>
 <li>安装方式：webstorm内部插件市场搜索<code>Atom Material Icons</code>或官方地址下载到本地进行安装</li>
@@ -146,7 +148,7 @@
 <li>使用效果：针不戳啊针不戳</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCa7Z9"><img src="https://s1.ax1x.com/2022/11/11/zCa7Z9.png" alt="zCa7Z9.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/14.png" alt="14.png"></p>
 <h3 id="GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"><a href="#GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；" class="headerlink" title="GitToolBox: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"></a><strong>GitToolBox</strong>: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；</h3><ul>
 <li>插件描述：没记错的话VsCode里面也有一款类似的插件，可以看见每行代码是谁、在什么时候提交的，提交message是什么，不用再使用Annote with Git Blame了</li>
 <li>安装方式：webstorm内部插件市场搜索<code>GitToolBox</code>或官方地址下载到本地进行安装</li>
@@ -154,7 +156,7 @@
 <li>使用效果：方便啊方便，非常方便的！！一看有bug，就知道是谁写的这垃圾代码了！</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCaLPx"><img src="https://s1.ax1x.com/2022/11/11/zCaLPx.png" alt="zCaLPx.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/15.png" alt="15.png"></p>
 <h3 id="Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"><a href="#Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便" class="headerlink" title="Paste images into MarkDown: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"></a><strong>Paste images into MarkDown</strong>: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便</h3><ul>
 <li>插件描述：在WebStorm写markdwon文档的时候，有时候需要增加图片可能要先将图片放到文件夹，再在markdown中引用，那么这个插件可以很好的解决问题，剪贴板上有图片信息，直接ctrl+V进行粘贴</li>
 <li>安装方式：webstorm内部插件市场搜索<code>Paste images into MarkDown</code>或官方地址下载到本地进行安装</li>
@@ -162,14 +164,14 @@
 <li>使用效果：提升效率的利器，还可以设置图片存储路径，是否是圆角、图片大小等</li>
 <li>推荐指数：🌟🌟🌟🌟🌟 </li>
 </ul>
-<p><a href="https://imgse.com/i/zCabI1"><img src="https://s1.ax1x.com/2022/11/11/zCabI1.png" alt="zCabI1.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/16.png" alt="16.png"></p>
 <p>好啦，可以写出来的常用的就这些基本插件啦，更多的插件可以去我的博客了解：<a href="https://blog.wangboweb.site/2019/08/17/63952.html">https://blog.wangboweb.site/2019/08/17/63952.html</a></p>
-<h2 id="设置一下"><a href="#设置一下" class="headerlink" title="设置一下"></a>设置一下</h2><h3 id="字体以及UI、展示风格"><a href="#字体以及UI、展示风格" class="headerlink" title="字体以及UI、展示风格"></a>字体以及UI、展示风格</h3><p><a href="https://imgse.com/i/zCaOG6"><img src="https://s1.ax1x.com/2022/11/11/zCaOG6.png" alt="zCaOG6.png"></a></p>
+<h2 id="设置一下"><a href="#设置一下" class="headerlink" title="设置一下"></a>设置一下</h2><h3 id="字体以及UI、展示风格"><a href="#字体以及UI、展示风格" class="headerlink" title="字体以及UI、展示风格"></a>字体以及UI、展示风格</h3><p><img src="https://s1.imagehub.cc/images/2022/11/12/17.png" alt="17.png"></p>
 <h3 id="文件模板设置"><a href="#文件模板设置" class="headerlink" title="文件模板设置"></a>文件模板设置</h3><p>详情：<a href="https://blog.wangboweb.site/2021/08/04/60426.html">https://blog.wangboweb.site/2021/08/04/60426.html</a> </p>
-<p><a href="https://imgse.com/i/zCajxO"><img src="https://s1.ax1x.com/2022/11/11/zCajxO.png" alt="zCajxO.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/18.png" alt="18.png"></p>
 <h3 id="配置信息备份"><a href="#配置信息备份" class="headerlink" title="配置信息备份"></a>配置信息备份</h3><p>可以备份到云上，也可以备份到jetbrains 账户上 </p>
-<p><a href="https://imgse.com/i/zCdSqH"><img src="https://s1.ax1x.com/2022/11/11/zCdSqH.png" alt="zCdSqH.png"></a></p>
-<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p><a href="https://imgse.com/i/zCazse"><img src="https://s1.ax1x.com/2022/11/11/zCazse.png" alt="zCazse.png"></a></p>
+<p><img src="https://s1.imagehub.cc/images/2022/11/12/19.png" alt="19.png"></p>
+<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p><img src="https://s1.imagehub.cc/images/2022/11/12/20.png" alt="20.png"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 大概就是这么多了，其实很多功能在日常开发中不一定会用到，但是一旦发现了，就会很顺手，需要自己多多探索，打造一个适合自己的编译器，才能真正的提高开发效率！！！</p>
 ]]></content>
       <categories>
@@ -4163,138 +4165,6 @@
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>webstorm之好用的插件</title>
-    <url>/webstorm/webstorm/4-webstorm/</url>
-    <content><![CDATA[<h2 id="webstorm必装插件"><a href="#webstorm必装插件" class="headerlink" title="webstorm必装插件"></a>webstorm必装插件</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 作为一个FE开发者，在日常工作中用的最多的可能就是WebStorm与VsCode，我在工作的这几年一直使用的是WebStorm进行开发，今天为大家带来我工作中使用的一些Webstorm插件以及一些可以提效的配置方法，希望能够帮助使用WebStorm的朋友们更加高效工作，多余时间可以多摸摸🐟！</p>
-<h2 id="最终效果展示"><a href="#最终效果展示" class="headerlink" title="最终效果展示"></a>最终效果展示</h2><p><img src="https://s1.imagehub.cc/images/2022/11/12/1.png" alt="1.png">](<a href="https://imgse.com/i/zCaIr4">https://imgse.com/i/zCaIr4</a>)</p>
-<h2 id="插件推荐"><a href="#插件推荐" class="headerlink" title="插件推荐"></a>插件推荐</h2><blockquote>
-<p> 下面会详细介绍每一个插件的安装、使用建议，推荐指数✨ </p>
-</blockquote>
-<h3 id="ignore-版本管理工具的忽略文件插件"><a href="#ignore-版本管理工具的忽略文件插件" class="headerlink" title=".ignore: 版本管理工具的忽略文件插件"></a><strong>.ignore</strong>: 版本管理工具的忽略文件插件</h3><ul>
-<li>插件描述：支持创建多种.ignore文件，会默认设置到需要忽略的文件或文件夹，我常用的是.gitignore，用于常见前端常见的需要忽略提交的文件，如node_modules，dist等；支持将文件旋选中右键进行添加到.gitignore；</li>
-<li>安装方式：webstorm内部插件市场搜索<code>.ignore</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7495--ignore">https://plugins.jetbrains.com/plugin/7495–ignore</a></li>
-<li>使用效果：个人感觉很实用，会非常方便，有时候如果已经将文件添加到git提交缓存中的时候，需要使用命令清除缓存把文件撤销出来，这个插件可以帮助你完成这一步。更多功能需要自己使用进行发掘</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<a id="more"></a>
-
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/2.gif" alt="2.gif"></p>
-<h3 id="Power-Mode-II-打字特效"><a href="#Power-Mode-II-打字特效" class="headerlink" title="Power Mode II: 打字特效"></a><strong>Power Mode II</strong>: 打字特效</h3><ul>
-<li>插件描述：炫酷的打字效果，除了炫酷，没任何卵用，屏幕抖动的看着难受；</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Power Mode II</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8251-power-mode-ii">https://plugins.jetbrains.com/plugin/8251-power-mode-ii</a></li>
-<li>使用效果：装13可以，效果不大</li>
-<li>推荐指数：🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/3.gif" alt="3.gif"></p>
-<h3 id="activate-power-mode-打字特效"><a href="#activate-power-mode-打字特效" class="headerlink" title="activate-power-mode: 打字特效"></a><strong>activate-power-mode</strong>: 打字特效</h3><ul>
-<li>插件描述：与Power Mode II类似，效果更爆炸</li>
-<li>安装方式：webstorm内部插件市场搜索<code>activate-power-mode</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8330-activate-power-mode">https://plugins.jetbrains.com/plugin/8330-activate-power-mode</a></li>
-<li>使用效果：头晕式摸鱼</li>
-<li>推荐指数：🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/4.gif" alt="4.gif"></p>
-<h3 id="CodeSearch-右键搜索-通过Google搜索-墙内不能用"><a href="#CodeSearch-右键搜索-通过Google搜索-墙内不能用" class="headerlink" title="CodeSearch: 右键搜索(通过Google搜索,墙内不能用)"></a><strong>CodeSearch</strong>: 右键搜索(通过Google搜索,墙内不能用)</h3><ul>
-<li>插件描述：选中某段内容，可以直接右键通过搜索引擎搜索进行搜索；需要配置搜索引擎，可以配置Baidu, Google, StackOverflow and GitHub四种</li>
-<li>安装方式：webstorm内部插件市场搜索<code>codeSearch</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/12578-codesearch">https://plugins.jetbrains.com/plugin/12578-codesearch</a></li>
-<li>使用效果：实用性挺高，很方便的帮助搜索，安装以后就可以选中要搜索的东西</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/5.png" alt="5.png">](<a href="https://imgse.com/i/zCaWGV">https://imgse.com/i/zCaWGV</a>)</p>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/6.png" alt="6.png"></p>
-<h3 id="Rainbow-Brackets-括号换色提示插件"><a href="#Rainbow-Brackets-括号换色提示插件" class="headerlink" title="Rainbow Brackets: 括号换色提示插件"></a><strong>Rainbow Brackets</strong>: 括号换色提示插件</h3><ul>
-<li>插件描述：代码中如果嵌套较深的话，找前面的括号与后面对应的地方会很麻烦，这款插件使用不同颜色进行标记，可以很方便的找到对应的开始和结尾的括号</li>
-<li>安装方式：webstorm内部插件市场搜索<code>.ignore</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets">https://plugins.jetbrains.com/plugin/10080-rainbow-brackets</a></li>
-<li>使用效果：个人感觉比较方便，可以快速定位，并且代码界面也会看起来更好看一点，愉悦心情，开心coding；</li>
-<li>推荐指数：🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/7.png" alt="7.png">](<a href="https://imgse.com/i/zCag5q">https://imgse.com/i/zCag5q</a>)</p>
-<h3 id="Translation-翻译插件"><a href="#Translation-翻译插件" class="headerlink" title="Translation: 翻译插件"></a><strong>Translation</strong>: 翻译插件</h3><ul>
-<li>插件描述：翻译插件，可以便捷的在WebStorm中进行翻译，省去了去浏览器进行翻译的操作，也支持右键方式选中翻译</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Translation</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8579-translation">https://plugins.jetbrains.com/plugin/8579-translation</a></li>
-<li>使用效果：翻译更便捷啦，但是还是要多动脑子想一想呀</li>
-<li>推荐指数：🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/8.png" alt="8.png">](<a href="https://imgse.com/i/zCaRP0">https://imgse.com/i/zCaRP0</a>)</p>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/9.png" alt="9.png"></p>
-<h3 id="AceJump-光标快速定位"><a href="#AceJump-光标快速定位" class="headerlink" title="AceJump: 光标快速定位"></a><strong>AceJump</strong>: 光标快速定位</h3><ul>
-<li>插件描述：AceJump 允许您将插入符号快速导航到编辑器中可见的任何位置，使用方式快捷键：Ctrl+;</li>
-<li>安装方式：webstorm内部插件市场搜索<code>AceJump</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7086-acejump">https://plugins.jetbrains.com/plugin/7086-acejump</a></li>
-<li>使用效果：用的不是很多，得使用快捷键，也不是很方便，马马虎虎吧，看个人喜好</li>
-<li>推荐指数：🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/10.png" alt="10.png"></p>
-<h3 id="Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"><a href="#Material-Theme-UI-设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错" class="headerlink" title="Material Theme UI: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错"></a><strong>Material Theme UI</strong>: 设置主题，不好的是大部分是暗色主题，亮色的特别亮，但是支持的文件图标不错</h3><ul>
-<li>插件描述：众所周知，一款很出名的主题</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Material Theme UI</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8006-material-theme-ui">https://plugins.jetbrains.com/plugin/8006-material-theme-ui</a></li>
-<li>使用效果：根据个人喜好吧，自己喜欢的才是最好的</li>
-<li>推荐指数：🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/11.png" alt="11.png">](<a href="https://imgse.com/i/zCa5MF">https://imgse.com/i/zCa5MF</a>)</p>
-<h3 id="CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度"><a href="#CodeGlance-右侧小地图导航，像sublime-text中一样的那个，可以配置宽度" class="headerlink" title="CodeGlance: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度"></a><strong>CodeGlance</strong>: 右侧小地图导航，像sublime text中一样的那个，可以配置宽度</h3><ul>
-<li>插件描述：可以在打开的窗口右边显示小地图，用于快速定位跳转，尤其是针对很多行的文件，就很方便的；</li>
-<li>安装方式：webstorm内部插件市场搜索<code>CodeGlance</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7275-codeglance">https://plugins.jetbrains.com/plugin/7275-codeglance</a></li>
-<li>使用效果：可以配置小地图宽度，可以设置固定宽，也可以拖拉设置宽度</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/12.png" alt="12.png"></p>
-<h3 id="Codota-AI代码生成，自动联想，支持javaScript和java；"><a href="#Codota-AI代码生成，自动联想，支持javaScript和java；" class="headerlink" title="Codota: AI代码生成，自动联想，支持javaScript和java；"></a><strong>Codota</strong>: AI代码生成，自动联想，支持javaScript和java；</h3><ul>
-<li>插件描述：代码联想，不用过多解释了</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Codota</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript">https://plugins.jetbrains.com/plugin/7638-codota-ai-autocomplete-for-java-and-javascript</a></li>
-<li>使用效果：我用的觉得还行，它可以快捷显示之前输入过的内容，或者快捷生成函数等，可以提升写代码的速度</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/13.gif" alt="13.gif"></p>
-<h3 id="Atom-Material-Icons-文件图标、系统图标会更好看；"><a href="#Atom-Material-Icons-文件图标、系统图标会更好看；" class="headerlink" title="Atom Material Icons: 文件图标、系统图标会更好看；"></a><strong>Atom Material Icons</strong>: 文件图标、系统图标会更好看；</h3><ul>
-<li>插件描述：为文件夹、文件增加图标，让编译器看起来更美观，也是一款可以愉快coding的好用插件</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Atom Material Icons</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/10044-atom-material-icons">https://plugins.jetbrains.com/plugin/10044-atom-material-icons</a></li>
-<li>使用效果：针不戳啊针不戳</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/14.png" alt="14.png"></p>
-<h3 id="GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"><a href="#GitToolBox-git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；" class="headerlink" title="GitToolBox: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；"></a><strong>GitToolBox</strong>: git提交记录插件，鼠标在某行代码的时候可以看见是谁在什么时候提交的，提交信息是什么；</h3><ul>
-<li>插件描述：没记错的话VsCode里面也有一款类似的插件，可以看见每行代码是谁、在什么时候提交的，提交message是什么，不用再使用Annote with Git Blame了</li>
-<li>安装方式：webstorm内部插件市场搜索<code>GitToolBox</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/7499-gittoolbox">https://plugins.jetbrains.com/plugin/7499-gittoolbox</a></li>
-<li>使用效果：方便啊方便，非常方便的！！一看有bug，就知道是谁写的这垃圾代码了！</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/15.png" alt="15.png"></p>
-<h3 id="Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"><a href="#Paste-images-into-MarkDown-在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl-v或command-v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便" class="headerlink" title="Paste images into MarkDown: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便"></a><strong>Paste images into MarkDown</strong>: 在编写markdown时，如果需要添加图片，则复制以后可直接使用ctrl+v或command+v进行粘贴，会弹出一个弹框设置图片名称、路径，十分方便</h3><ul>
-<li>插件描述：在WebStorm写markdwon文档的时候，有时候需要增加图片可能要先将图片放到文件夹，再在markdown中引用，那么这个插件可以很好的解决问题，剪贴板上有图片信息，直接ctrl+V进行粘贴</li>
-<li>安装方式：webstorm内部插件市场搜索<code>Paste images into MarkDown</code>或官方地址下载到本地进行安装</li>
-<li>官方地址：<a href="https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown">https://plugins.jetbrains.com/plugin/8446-paste-images-into-markdown</a></li>
-<li>使用效果：提升效率的利器，还可以设置图片存储路径，是否是圆角、图片大小等</li>
-<li>推荐指数：🌟🌟🌟🌟🌟 </li>
-</ul>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/16.png" alt="16.png"></p>
-<p>好啦，可以写出来的常用的就这些基本插件啦，更多的插件可以去我的博客了解：<a href="https://blog.wangboweb.site/2019/08/17/63952.html">https://blog.wangboweb.site/2019/08/17/63952.html</a></p>
-<h2 id="设置一下"><a href="#设置一下" class="headerlink" title="设置一下"></a>设置一下</h2><h3 id="字体以及UI、展示风格"><a href="#字体以及UI、展示风格" class="headerlink" title="字体以及UI、展示风格"></a>字体以及UI、展示风格</h3><p><img src="https://s1.imagehub.cc/images/2022/11/12/17.png" alt="17.png"></p>
-<h3 id="文件模板设置"><a href="#文件模板设置" class="headerlink" title="文件模板设置"></a>文件模板设置</h3><p>详情：<a href="https://blog.wangboweb.site/2021/08/04/60426.html">https://blog.wangboweb.site/2021/08/04/60426.html</a> </p>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/18.png" alt="18.png"></p>
-<h3 id="配置信息备份"><a href="#配置信息备份" class="headerlink" title="配置信息备份"></a>配置信息备份</h3><p>可以备份到云上，也可以备份到jetbrains 账户上 </p>
-<p><img src="https://s1.imagehub.cc/images/2022/11/12/19.png" alt="19.png"></p>
-<h3 id="设置背景图片"><a href="#设置背景图片" class="headerlink" title="设置背景图片"></a>设置背景图片</h3><p><img src="https://s1.imagehub.cc/images/2022/11/12/20.png" alt="20.png"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 大概就是这么多了，其实很多功能在日常开发中不一定会用到，但是一旦发现了，就会很顺手，需要自己多多探索，打造一个适合自己的编译器，才能真正的提高开发效率！！！</p>
-]]></content>
-      <categories>
-        <category>webstorm</category>
-      </categories>
-      <tags>
-        <tag>webstorm</tag>
       </tags>
   </entry>
 </search>
